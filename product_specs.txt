@@ -1,0 +1,23 @@
+Picture: buxton75.jpg
+Name: Buxton mineral water 0.75L
+Brand: Buxton
+Description: The number 1 British natural mineral water
+Size (liters): 0.75
+Quantity: 1
+Type: mineral water, still
+
+Picture: aqua-dor05l.jpeg
+Name: Aqua d'Or mineral water 0.5L
+Brand: Aqua d'Or
+Description: Mineral water from Danish Aqua d'Or
+Size (liters): 0.5
+Quantity: 1
+Type: mineral water, still
+
+Picture: aqua-dor-brus-citrus03l.jpeg
+Name: Aqua d'Or sparkling water 0.3L lemon
+Brand: Aqua d'Or
+Description: Refreshing sparkling mineral water from Denmark with a mild taste of lemon
+Size (liters): 0.3
+Quantity: 1
+Type: mineral water, sparkling, flavoured, lemon
