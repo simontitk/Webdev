@@ -21,3 +21,44 @@ Description: Refreshing sparkling mineral water from Denmark with a mild taste o
 Size (liters): 0.3
 Quantity: 1
 Type: mineral water, sparkling, flavoured, lemon
+
+Picture: Ramlösa33.png
+Name: Ramlösa Premium Citrus Brus 0.33L
+Brand: Ramlösa
+Description: Carbonated mineral water with a hint of citrus
+Size (liters): 0.33
+Quantity 1
+Type: Mieral water, carboranted, flavoured, citrus
+
+Picture: Ramlösa33x24.png
+Name: Ramlösa Premium Citrus Brus 0.33L
+Brand: Ramlösa
+Description: Carbonated mineral water with a hint of citrus
+Size (liters): 0.33
+Quantity 24
+Type: Mieral water, carboranted, flavoured, citrus
+
+Picture Hope50.png
+Name: Ramlösa Premium Citrus Brus 0.5L
+Brand: Ramlösa
+Description: Kildevand, REMA 1000 uden brus
+Size (liters): 0.5
+Quantity 1
+Type: Mieral water
+
+Picture Blue-keld-pinapple-mango1.png
+Name: Blue Keld Ananas & Mango 1L
+Brand: Blue Keld
+Description: Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour
+Size (liters): 1
+Quantity 1
+Type: Carbonated water, flavoured, pinapple, mango
+
+Picture Blue-keld-kiwi-lime1.png
+Name: Blue Keld Kiwi & Lime 1L
+Brand: Blue Keld
+Description: Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour
+Size (liters): 1
+Quantity 1
+Type: Carbonated water, flavoured, Kiwi, Lime
+
