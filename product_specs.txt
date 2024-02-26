@@ -6,7 +6,7 @@ Size (liters): 0.75
 Quantity: 1
 Type: mineral water, still
 
-Picture: aqua-dor05l.jpeg
+Picture: aqua-dor_mineralwater_05l.jpg.jpeg
 Name: Aqua d'Or mineral water 0.5L
 Brand: Aqua d'Or
 Description: Mineral water from Danish Aqua d'Or
@@ -22,7 +22,7 @@ Size (liters): 0.3
 Quantity: 1
 Type: mineral water, sparkling, flavoured, lemon
 
-Picture: Ramlösa33.png
+Picture: Ramlösa_with_citrus_Carbonated_33.png
 Name: Ramlösa Premium Citrus Brus 0.33L
 Brand: Ramlösa
 Description: Carbonated mineral water with a hint of citrus
@@ -30,7 +30,7 @@ Size (liters): 0.33
 Quantity 1
 Type: Mieral water, carboranted, flavoured, citrus
 
-Picture: Ramlösa33x24.png
+Picture: Ramlösa_with_citrus_Carbonated_033x24.png
 Name: Ramlösa Premium Citrus Brus 0.33L
 Brand: Ramlösa
 Description: Carbonated mineral water with a hint of citrus
@@ -38,15 +38,15 @@ Size (liters): 0.33
 Quantity 24
 Type: Mieral water, carboranted, flavoured, citrus
 
-Picture Hope50.png
-Name: Ramlösa Premium Citrus Brus 0.5L
-Brand: Ramlösa
+Picture: Rema1000_Hope_Mineralwater_50.png
+Name: Hope 0.5L
+Brand: Rema1000
 Description: Kildevand, REMA 1000 uden brus
 Size (liters): 0.5
 Quantity 1
 Type: Mieral water
 
-Picture Blue-keld-pinapple-mango1.png
+Picture: Blue_Keld_pinapple_mango_Carbonated_Flavoured1.png
 Name: Blue Keld Ananas & Mango 1L
 Brand: Blue Keld
 Description: Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour
@@ -54,7 +54,7 @@ Size (liters): 1
 Quantity 1
 Type: Carbonated water, flavoured, pinapple, mango
 
-Picture Blue-keld-kiwi-lime1.png
+Picture: Blue_Keld_Kiwi_Lime_Carbonated_Flavored1.png
 Name: Blue Keld Kiwi & Lime 1L
 Brand: Blue Keld
 Description: Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour
@@ -62,3 +62,132 @@ Size (liters): 1
 Quantity 1
 Type: Carbonated water, flavoured, Kiwi, Lime
 
+Picture: Salling_mineralwater_05.png
+Name: Salling Vand 0.5L
+Brand: Salling
+Description: Salling mineral water, ideal to bring along when on the go.
+Size (liters): 0.5
+Quantity 1
+Type: Mineral water
+
+Picture: Salling_mineralwater_2.png
+Name: Salling Vand 2L
+Brand: Salling
+Description: Salling mineral water, ideal for the dinner table.
+Size (liters): 0.5
+Quantity 1
+Type: Mineral water
+
+Picture: Kildevæld_mineralwater_05.png
+Name: Kildevæld 0.5L
+Brand: Carlberg Kildevæld
+Description: Refreshing, natural mineral water. Tapped directly from an underground spring on the jutlandish heath.
+Size (liters): 0.5
+Quantity 1
+Type: Mineral water
+
+Picture: Egekilde_mineralwater_05.png
+Name: Egekilde 0.5L
+Brand: Unibrew Egekilde
+Description: Mineral water from the underground of the forrests of southern Sjælland.
+Size (liters): 0.5
+Quantity 1
+Type: Mineral water
+
+Picture: Egekilde_mineralwater_15.png
+Name: Egekilde 1.5L
+Brand: Unibrew Egekilde
+Description: Mineral water from the underground of the forrests of southern Sjælland.
+Size (liters): 1.5
+Quantity 1
+Type: Mineral water
+
+Picture: Bottlers-spring_mineralwater_05.png
+Name: Spring 0.5L
+Brand: Bottlers
+Description: Mineral water from the undergrounds of Ireland.
+Size (liters): 0.5
+Quantity 1
+Type: Mineral water
+
+Picture: Bottlers-spring_mineralwater_05x24.png
+Name: Spring 0.5L
+Brand: Bottlers
+Description: Mineral water from the undergrounds of Ireland.
+Size (liters): 0.5
+Quantity 24
+Type: Mineral water
+
+Picture: Harmless_Harvest_Coconutwater_036x24.png
+Name: Organic Coconut Water 0.36L
+Brand: Harmless Harvest
+Description: Nothing quenches thirst like the Original Coconut Water from Harmless Harvest.
+Size (liters): 0.36
+Quantity 24
+Type: Mineral water, Coconut, Flavoured
+
+Picture: Harmless_Harvest_Coconutwater_036.png
+Name: Organic Coconut Water 0.36L
+Brand: Harmless Harvest
+Description: Nothing quenches thirst like the Original Coconut Water from Harmless Harvest.
+Size (liters): 0.36
+Quantity 1
+Type: Mineral water, Coconut, Flavoured
+
+
+Picture: Essentia_Ionizedwater_extra_1.png
+Name: Essentia Ionized Water 1L
+Brand: Essentia
+Description: No matter the occasion, it's simply the best bollted water to drink.
+Size (liters): 1
+Quantity 1
+Type: Electrolyte, Ionized
+
+Picture: Essentia_Ionizedwater_extra_2.png
+Name: Essentia Ionized Water 2L
+Brand: Essentia
+Description: No matter the occasion, it's simply the best bollted water to drink.
+Size (liters): 2
+Quantity 1
+Type: Electrolyte, Ionized
+
+Picture: Suncoast_Lightwater_extra_12x6.png
+Name: Lightwater Electrolyte Enhanced Water 1.2L
+Brand: SunCoastbrands
+Description: Pure water and electrolytes(calcium, potassium and magnesium).
+Size (liters): 1.2
+Quantity 6
+Type: Electrolyte, purewater
+
+
+Picture: Suncoast_Lightwater_extra_12.png
+Name: Lightwater Electrolyte Enhanced Water 1.2L
+Brand: SunCoastbrands
+Description: Pure water and electrolytes(calcium, potassium and magnesium).
+Size (liters): 1.2
+Quantity 1
+Type: Electrolyte, purewater
+
+Picture: Cocacola_SmartWater_ekstra_1.png
+Name: Smart Water 1.L
+Brand: Coca Cola - Smart Water
+Description: Actice hydration for when you're staying active. It's everything you want from bottled water - pure hydrating and crisp.
+Size (liters): 1
+Quantity 1
+Type: Electrolyte, antioxidant
+
+Picture: Denice_mineralwater_05.png
+Name: Denice mineralvand 0.5L
+Brand: Denice
+Description: 100% natural mineral water of the highest quality from the AQUA D'OR source. 160meters betlow the jutlandish heath.
+Size (liters): 0.5
+Quantity 1
+Type: Mineral Water
+
+Picture: Denice_mineralwater_2.png
+Name: Denice mineralvand 2L
+Brand: Denice
+Description: 100% natural mineral water of the highest quality from the AQUA D'OR source. 160meters betlow the jutlandish heath.
+Size (liters): 2
+Quantity 1
+Type: Mineral Water
