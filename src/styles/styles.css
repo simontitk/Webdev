@@ -76,16 +76,20 @@ main {
     width: 100vw;
 }
 
+.center-panel {
+    margin-top: 70px; /* Adjust this value as needed */
+    min-width: 80%;
+  }
+
 .left-panel {
     background-color: black;
-    min-width: 20px;
 
 }
 
 .right-panel {
     background-color: black;
-    min-width: 20px;
 }
+
 
 
 /* ------------------- FOOTER ------------------- */
@@ -97,4 +101,3 @@ main {
     background-color: #D3D3D3;
     min-width: 100%;
  }
-

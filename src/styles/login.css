@@ -1,0 +1,39 @@
+form, label {
+    display:flex;
+    flex-direction:column;
+}
+
+button {
+    background-color: #3E758D;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #2e596b;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+input {
+    width: 80%; /* Set the width to 100% of the container */
+    /* Optionally, you can add other styling properties */
+    padding: 5px; /* Add padding for better visual appearance */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin-bottom: 5px;
+  }
