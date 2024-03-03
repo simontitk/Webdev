@@ -13,6 +13,20 @@ a {
     color: inherit;
 }
 
+p {
+    word-wrap: break-word;
+    min-width: 600px;
+    max-width: 800px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 
 /* ------------------- HEADER ------------------- */
 
@@ -74,17 +88,21 @@ main {
     justify-content: center;
     flex: 1;
     width: 100vw;
+    margin-top:70px;
 }
 
 .left-panel {
-    background-color: black;
-    min-width: 20px;
-
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    align-items: center;
 }
 
 .right-panel {
-    background-color: black;
-    min-width: 20px;
+    background-color: white;
+    padding: 20px;
+    max-width: 200px;
+    flex: 1;
 }
 
 
