@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>HydroHomies</title>
 </head>
 <body>
@@ -28,7 +29,95 @@
 
     <main>
         <div class="left-panel">
-            
+            <div class="filter-panel">
+                
+                <div class="filter-container">
+                    <div class="filter-header">
+                        Categories
+                        <button class="filter-collapse-button">X</button>
+                    </div>
+                    <div class="collapsible-filter-inputs">
+                        <span><input
+                            class="category-checkbox"
+                            type="checkbox" 
+                            checked
+                            name="carbonated-checkbox" 
+                            id="carbonated-checkbox"
+                            value="carbonated">Carbonated
+                        </span>
+                        <span><input
+                            class="category-checkbox"
+                            type="checkbox" 
+                            checked
+                            name="still-checkbox" 
+                            id="still-checkbox"
+                            value="still">Still
+                        </span>
+                        <span><input
+                            class="category-checkbox"
+                            type="checkbox" 
+                            checked 
+                            name="mineral-checkbox" 
+                            id="mineral-checkbox"
+                            value="mineral">Mineral
+                        </span>
+                        <span><input
+                            class="category-checkbox"
+                            type="checkbox" 
+                            checked 
+                            name="craft-checkbox" 
+                            id="craft-checkbox"
+                            value="craft">Craft water
+                        </span>
+                    </div>
+
+                </div>
+                <div class="filter-container">
+                    <div class="filter-header">
+                        Price
+                        <button class="filter-collapse-button">X</button>
+                    </div>
+                    <div class="collapsible-filter-inputs">
+                        <span>
+                            <input type="text" name="" id="min-price-input" placeholder="From">
+                            &nbsp-&nbsp
+                            <input type="text" name="" id="max-price-input" placeholder="To">
+                            DKK
+                        </span>
+                    </div>
+                </div>
+                <div class="filter-container">
+                    <div class="filter-header">
+                        Volume
+                        <button class="filter-collapse-button">X</button>
+                    </div>
+                    <div class="collapsible-filter-inputs">
+                        <span>
+                            <input type="text" name="" id="min-volume-input" placeholder="From">
+                            &nbsp-&nbsp
+                            <input type="text" name="" id="max-volume-input" placeholder="To">
+                            ml
+                        </span>
+                    </div>
+                </div>
+                <div class="filter-container">
+                    <div class="filter-header">
+                        Rating
+                        <button class="filter-collapse-button">X</button>
+                    </div>
+                    <div class="collapsible-filter-inputs">
+                        <span>
+                            <input type="text" name="" id="min-rating-input" placeholder="From">
+                            &nbsp-&nbsp
+                            <input type="text" name="" id="max-rating-input" placeholder="To">
+                            &nbsp
+                            <img src="../../assets/icons/droplet.png" alt="icon of a water droplet" width="28px">
+                        </span>
+                    </div>
+                </div>
+                <button class="button" id="filter-button">Filter products</button>
+                <button class="button">Reset filters</button>
+            </div>
         </div>
 
 
@@ -68,6 +157,14 @@
     </main>
     <footer id="footer">
     </footer>
-    
+    <script>
+        const toggleButtons = document.querySelectorAll(".filter-collapse-button");
+        const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
+        for (let i=0; i<toggleButtons.length; i++) {
+            toggleButtons[i].onclick = () => {
+                collapsibleFilterInputs[i].classList.toggle("collapsed-filter-inputs");
+            };
+        }
+    </script>
 </body>
 </html>
