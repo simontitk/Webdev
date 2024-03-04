@@ -78,14 +78,71 @@ main {
 
 .left-panel {
     background-color: black;
-    min-width: 20px;
+    min-width: 15%;
+}
 
+.center-panel {
+    min-width: 70%;
 }
 
 .right-panel {
     background-color: black;
-    min-width: 20px;
+    min-width: 15%;
 }
+
+
+/* ----------------PRODUCT PAGE - SIMON ---------*/
+
+
+
+
+
+/* CENTER PANEL */
+.product-section {
+    background-color: rgb(241, 239, 239);
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-items: center; /*!!!!*/
+}
+
+.product-card {
+    background-color: white;
+    width: 300px;
+    min-height: 400px;
+}
+
+.product-img-container {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.product-name-container {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+}
+
+.product-purchase-container {
+    font-size: 25px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-purchase-container img {
+    background-color: brown;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+
 
 
 /* ------------------- FOOTER ------------------- */
@@ -96,5 +153,22 @@ main {
     height: 60px;
     background-color: #D3D3D3;
     min-width: 100%;
+ }
+
+
+
+ @media only screen  and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        min-height: 100px;
+    }
+
+    .right-panel {
+        display: none;
+    }
  }
 
