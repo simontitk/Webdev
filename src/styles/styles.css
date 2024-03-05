@@ -59,6 +59,9 @@ header {
     background-color: #65b0fb;
 }
 
+
+/*--------------- BODY PANELS -----------------*/
+
 main {
     display: flex;
     margin-top: 70px;
