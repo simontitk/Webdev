@@ -1,3 +1,10 @@
+:root {
+    --main-light-gradient: linear-gradient(to left, #87C4FF, #6cb5ff);
+    --main-dark-gradient: linear-gradient(1deg, #365486, #3e5d94);   
+    --main-light-blue:  #87C4FF;
+    --main-dark-blue: #365486;
+}
+
 body {
     font-family: 'Poppins';
     margin: 0;
@@ -6,22 +13,42 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+
+.button {
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    background: var(--main-dark-gradient);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #42649e, #4d72b1);
+    color: floralwhite;
+}
  
 a {
     text-decoration: none;
     color: inherit;
 }
 
+li {
+    list-style-type: none;
+}
+
 /* ------------------- HEADER ------------------- */
  
-header {
+.header-container {
     display: flex;
     color: white;
     flex-direction: row;
     font-size: 25px;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to left, #87C4FF, #6cb5ff);
+    background: var(--main-light-gradient);
     height: 70px;
     overflow: hidden;
     position: fixed;
@@ -59,8 +86,6 @@ header {
 }
  
 
-/* ------------------- MAIN ------------------- */
-
 
 /*--------------- MAIN PANELS -----------------*/
 
@@ -94,14 +119,38 @@ main {
 /* ------------------- FOOTER ------------------- */
 
 
-
- footer {
-
+.footer-column-container {
     flex-shrink: 0;
-    height: 60px;
     background-color: #D3D3D3;
     min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
 
+.footer-column-container h1 {
+    font-size: 25px;
+    margin: 0px;
+}
+
+.footer-column-container ul {
+    padding: 0px;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+}
+
+.footer-column-container span {
+    color: var(--main-dark-blue);
+    font-weight: 500;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
  
@@ -116,5 +165,10 @@ main {
     .right-panel {
         display: none;
     }
+
+    .footer-column-container {
+        flex-direction: column;
+    }
+
  }
 

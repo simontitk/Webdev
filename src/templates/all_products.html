@@ -4,33 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/product-page.css">
+    <link rel="stylesheet" href="../styles/all_products.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>HydroHomies</title>
 </head>
 <body>
-    <header>
-        <div class="header-logo"><a href="">HydroHomies</a></div>
-        <div class="header-lists">
-            <ul class="header-links">
-                <li><a href="./all_products.html">Products</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-            <ul class="header-links">
-                <li><a href="./profile.html"><img src="../../assets/icons/profile.png" alt="profile-picture" height="36px" ></a></li>
-                <li><a href="./index.html"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ></a></li>
-                <li><a href="./shopping_cart.html"><img src="../../assets/icons/shopping-cart.png" alt="shopping-cart-picture" height="36px" ></a></li>
-            </ul>
-        </div>
-
+    <header id="header">
     </header>
-
     <main>
         <div class="left-panel">
             <div class="filter-panel">
-                
                 <div class="filter-container">
                     <div class="filter-header">
                         Categories
@@ -70,7 +55,6 @@
                             value="craft">Craft water
                         </span>
                     </div>
-
                 </div>
                 <div class="filter-container">
                     <div class="filter-header">
@@ -119,139 +103,17 @@
                 <button class="button">Reset filters</button>
             </div>
         </div>
-
         <div class="center-panel">
             <section class="product-section">
             </section>
         </div>
-
-        <div class="right-panel"></div>
-
+        <div class="right-panel">
+        </div>
     </main>
     <footer id="footer">
     </footer>
-    <script>
-        const toggleButtons = document.querySelectorAll(".filter-collapse-button");
-        const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
-        for (let i=0; i<toggleButtons.length; i++) {
-            toggleButtons[i].onclick = () => {
-                collapsibleFilterInputs[i].classList.toggle("collapsed-filter-inputs");
-            };
-        }
-    </script>
-    <script>
-        const PRODUCTS = [
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-        ];
-
-        const createProductCard = (product) => {
-            return (
-                `<div class="product-card">
-                    <div class="product-img-container">
-                        <img 
-                            src="../../images/${product.img}" 
-                            alt="${product.imgAlt}"
-                            width="260px">
-                    </div>
-                    <div class="product-name-container">
-                        <span>${product.name}</span>
-                        <span>${product.quantity}x${product.volume}L</span>
-                    </div>
-                    <div class="product-purchase-container">
-                        <span>${product.price} DKK</span>
-                        <img src="../../assets/icons/shopping-cart.png" width="50px" alt="">
-                    </div>
-                </div>`
-            );
-        };
-
-        const insertProductCards = (selectedProducts) => {
-            const productSection = document.querySelector(".product-section");
-            selectedProducts.forEach(product => productSection.innerHTML+=createProductCard(product))
-        }
-
-        insertProductCards(PRODUCTS);
-
-        const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
-        const minPriceInput = document.getElementById("min-price-input");
-        const maxPriceInput = document.getElementById("max-price-input");
-        const minVolumeInput = document.getElementById("min-volume-input");  
-        const maxVolumeInput = document.getElementById("max-volume-input");          
-        const minRatingInput = document.getElementById("min-rating-input");  
-        const maxRatingInput = document.getElementById("max-rating-input");  
-        const filterButton = document.getElementById("filter-button");
-
-        
-
-        filterButton.onclick = () => {
-            let selectedCategories = categoryCheckboxes
-                .filter(cb => cb.checked)
-                .map(cb => cb.value);
-            console.log(selectedCategories);
-        };
-    </script>
+    <script type="module" src="../scripts/setup.js"></script>
+    <script src="../scripts/cart.js"></script>
+    <script type="module" src="../scripts/all_products.js"></script>
 </body>
 </html>
