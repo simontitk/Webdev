@@ -43,6 +43,7 @@ li {
 /* ------------------- HEADER ------------------- */
 
 .header-container {
+    z-index: 1000;
     display: flex;
     color: white;
     flex-direction: row;

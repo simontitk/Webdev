@@ -349,6 +349,7 @@ export function createProducts() {
             "price": 999.95,
             "id": 26
         }
-    ]
-    );
+
+    ]);
 }
+
