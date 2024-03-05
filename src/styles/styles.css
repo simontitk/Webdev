@@ -35,9 +35,13 @@ a {
     color: inherit;
 }
 
+li {
+    list-style-type: none;
+}
+
 /* ------------------- HEADER ------------------- */
  
-header {
+.header-container {
     display: flex;
     color: white;
     flex-direction: row;
@@ -82,8 +86,6 @@ header {
 }
  
 
-/* ------------------- MAIN ------------------- */
-
 
 /*--------------- MAIN PANELS -----------------*/
 
@@ -117,14 +119,38 @@ main {
 /* ------------------- FOOTER ------------------- */
 
 
-
- footer {
-
+.footer-column-container {
     flex-shrink: 0;
-    height: 60px;
     background-color: #D3D3D3;
     min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
 
+.footer-column-container h1 {
+    font-size: 25px;
+    margin: 0px;
+}
+
+.footer-column-container ul {
+    padding: 0px;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+}
+
+.footer-column-container span {
+    color: var(--main-dark-blue);
+    font-weight: 500;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
  
@@ -139,5 +165,10 @@ main {
     .right-panel {
         display: none;
     }
+
+    .footer-column-container {
+        flex-direction: column;
+    }
+
  }
 
