@@ -6,7 +6,7 @@
 .filter-container {
     display: flex;
     flex-direction: column;
-    background-color: #3E758D;
+    background-color:  #365486;
     font-size: 20px;
     min-width: 170px;
     padding: 20px 10px 0px 10px;
@@ -46,7 +46,6 @@
 }
 
 
-
 /* CENTER PANEL */
 .product-section {
     background-color: rgb(241, 239, 239);
@@ -61,18 +60,39 @@
 .product-card {
     background-color: white;
     width: 300px;
-    min-height: 400px;
+    height: 485px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-.product-img-container {
-    padding-top: 20px;
+.product-image {
+    margin-top: 20px;
     text-align: center;
+    max-width: 260px;
+    max-height: 260px;
+    height: auto;
+    width: auto;
 }
 
 .product-name-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     font-size: 25px;
     font-weight: bold;
     padding: 10px 20px 10px 20px;
+}
+
+.product-size {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.product-name {
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .product-purchase-container {

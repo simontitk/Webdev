@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/product-page.css">
+    <link rel="stylesheet" href="../styles/all_products.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,11 +13,9 @@
 <body>
     <header id="header">
     </header>
-
     <main>
         <div class="left-panel">
             <div class="filter-panel">
-                
                 <div class="filter-container">
                     <div class="filter-header">
                         Categories
@@ -57,7 +55,6 @@
                             value="craft">Craft water
                         </span>
                     </div>
-
                 </div>
                 <div class="filter-container">
                     <div class="filter-header">
@@ -106,83 +103,17 @@
                 <button class="button">Reset filters</button>
             </div>
         </div>
-
         <div class="center-panel">
             <section class="product-section">
-                
             </section>
         </div>
-
-        <div class="right-panel"></div>
-
+        <div class="right-panel">
+        </div>
     </main>
     <footer id="footer">
-
     </footer>
     <script type="module" src="../scripts/setup.js"></script>
-    <script>
-        const toggleButtons = document.querySelectorAll(".filter-collapse-button");
-        const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
-        for (let i=0; i<toggleButtons.length; i++) {
-            toggleButtons[i].onclick = () => {
-                collapsibleFilterInputs[i].classList.toggle("collapsed-filter-inputs");
-            };
-        }
-    </script>
     <script src="../scripts/cart.js"></script>
-    <script type="module">
-        import {getProducts} from "../scripts/products.js"
-
-        const PRODUCTS = getProducts();
-
-        const createProductCard = (product) => {
-            return (
-                `<div class="product-card">
-                    <div class="product-img-container">
-                        <img 
-                            src="../../images/${product.picture}" 
-                            alt="${product.description}"
-                            height="260px"
-                            class="product-image">
-                    </div>
-                    <div class="product-name-container">
-                        <span class="product-name">${product.name}</span>
-                        <span>${product.quantity}x${product.size}ml</span>
-                    </div>
-                    <div class="product-purchase-container">
-                        <span class="product-price">${product.price} DKK</span>
-                        <button class="add-to-cart-button">
-                            <img src="../../assets/icons/shopping-cart.png" width="50px" height="50px" alt="">
-                        </button>
-                    </div>
-                </div>`
-            );
-        };
-
-        const insertProductCards = (selectedProducts) => {
-            const productSection = document.querySelector(".product-section");
-            selectedProducts.forEach(product => productSection.innerHTML+=createProductCard(product))
-        }
-
-        insertProductCards(PRODUCTS);
-
-        const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
-        const minPriceInput = document.getElementById("min-price-input");
-        const maxPriceInput = document.getElementById("max-price-input");
-        const minVolumeInput = document.getElementById("min-volume-input");  
-        const maxVolumeInput = document.getElementById("max-volume-input");          
-        const minRatingInput = document.getElementById("min-rating-input");  
-        const maxRatingInput = document.getElementById("max-rating-input");  
-        const filterButton = document.getElementById("filter-button");
-
-        
-
-        filterButton.onclick = () => {
-            let selectedCategories = categoryCheckboxes
-                .filter(cb => cb.checked)
-                .map(cb => cb.value);
-            console.log(selectedCategories);
-        };
-    </script>
+    <script type="module" src="../scripts/all_products.js"></script>
 </body>
 </html>

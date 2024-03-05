@@ -1,4 +1,4 @@
-export function getProducts() {
+export function createProducts() {
     return [
         {
             "picture": "Buxton_1x750ml.jpg",
@@ -15,7 +15,7 @@ export function getProducts() {
             "id": 0
         },
         {
-            "picture": "aqua-dor_mineralwater_05l.jpg.jpeg",
+            "picture": "Aqua_Dor_Mineral_1x1000ml.jpg",
             "name": "Aqua d'Or mineral water",
             "brand": "Aqua d'Or",
             "description": "Mineral water from Danish Aqua d'Or",
@@ -29,7 +29,7 @@ export function getProducts() {
             "id": 1
         },
         {
-            "picture": "aqua-dor-brus-citrus03l.jpeg",
+            "picture": "Aqua_Dor_Citrus_1x300ml.jpeg",
             "name": "Aqua d'Or sparkling water  lemon",
             "brand": "Aqua d'Or",
             "description": "Refreshing sparkling mineral water from Denmark with a mild taste of lemon",
@@ -200,19 +200,6 @@ export function getProducts() {
             "id": 13
         },
         {
-            "picture": "Bottlers-spring_mineralwater_05x24.png",
-            "name": "Spring",
-            "brand": "Bottlers",
-            "description": "Mineral water from the undergrounds of Ireland.",
-            "size": 500.0,
-            "quantity": "24",
-            "categories": [
-                "mineral water"
-            ],
-            "price": 14.95,
-            "id": 14
-        },
-        {
             "picture": "Harmless_Harvest_Coconutwater_036x24.png",
             "name": "Organic Coconut Water",
             "brand": "Harmless Harvest",
@@ -241,10 +228,6 @@ export function getProducts() {
             ],
             "price": 9.95,
             "id": 16
-        },
-        {
-            "price": 14.95,
-            "id": 17
         },
         {
             "picture": "Essentia_Ionizedwater_extra_1.png",
@@ -276,7 +259,7 @@ export function getProducts() {
         },
         {
             "picture": "Suncoast_Lightwater_extra_12x6.png",
-            "name": "Lightwater Electrolyte Enhanced Water",
+            "name": "Lightwater Electrolyte Water",
             "brand": "SunCoastbrands",
             "description": "Pure water and electrolytes(calcium, potassium and magnesium).",
             "size": 1200.0,
@@ -289,12 +272,8 @@ export function getProducts() {
             "id": 20
         },
         {
-            "price": 19.95,
-            "id": 21
-        },
-        {
             "picture": "Suncoast_Lightwater_extra_12.png",
-            "name": "Lightwater Electrolyte Enhanced Water",
+            "name": "Lightwater Electrolyte Water",
             "brand": "SunCoastbrands",
             "description": "Pure water and electrolytes(calcium, potassium and magnesium).",
             "size": 1200.0,
