@@ -1,0 +1,106 @@
+/* ----------------PRODUCT PAGE - SIMON ---------*/
+
+/* LEFT PANEL */
+
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #3E758D;
+    font-size: 20px;
+    min-width: 170px;
+    padding: 20px 10px 0px 10px;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.filter-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.filter-container input[type="text"] {
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 0px;
+    text-align: center;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.collapsible-filter-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.collapsed-filter-inputs {
+    display: none;
+}
+
+
+
+/* CENTER PANEL */
+.product-section {
+    background-color: rgb(241, 239, 239);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-items: center; /*!!!!*/
+}
+
+.product-card {
+    background-color: white;
+    width: 300px;
+    min-height: 400px;
+}
+
+.product-img-container {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.product-name-container {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+}
+
+.product-purchase-container {
+    font-size: 25px;
+    padding-inline: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-purchase-container img {
+    background-color: brown;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+
+ @media only screen and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .right-panel {
+        display: none;
+    }
+ }
+

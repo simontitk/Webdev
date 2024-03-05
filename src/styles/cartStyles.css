@@ -1,0 +1,206 @@
+ /* ------------------- CART MAIN  ------------------- */
+
+    .pimary-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .header-filler {
+        height: 40px;
+    }
+    
+    .top-cart-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: flex-end;
+        padding-left: 40px;
+
+    }
+    .middle-cart-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .subtotal-cart-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items:end;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .subtotal-content {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .subtotal-item {
+        null
+    }
+
+    .bottom-cart-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+
+    .basket-item-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+        height: 70px;
+        padding: 10px;
+        border: 2px solid rgb(113, 113, 113);
+        border-radius: 5px;
+        background-color: #87C4FF;
+        margin: 5px;
+    }
+ 
+/* ------------------- BASKET ITEM DETAILS  ------------------- */
+
+    .basket-item-row img {
+        width: 65px;
+        height: 65px;
+        align-self: center;
+    }
+
+    .basket-item-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .basket-item-name h2 {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    .basket-item-space {
+        null
+    }
+
+    .basket-item-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;   
+    }
+
+    .basket-item-price h3 {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    .basket-item-price h4 {
+        font-size: 12px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        color: rgb(44, 44, 44);
+    }
+
+
+ /* ------------------- BUTTONS  ------------------- */
+ .button-cart {
+    appearance: none;
+    background-color: #3EB2FD;
+    background-image: linear-gradient(1deg, #39A7FF, #87C4FF 99%);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 15px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'poppins';
+    font-size: 1rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s,background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    }
+
+    .button-cart:active,
+    .button-cart:focus {
+    outline: none;
+    }
+
+    .button-cart:hover {
+    background-position: -20px -20px;
+    }
+
+    .button-cart:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+    }
+
+    .button-delete {    
+        appearance: none;
+        background-color: #E0F4FF;
+        border: 1px solid rgba(27, 31, 35, .15);
+        border-radius: 6px;
+        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+        box-sizing: border-box;
+        color: #3f3f3f;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'poppins';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 1px 2px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: nowrap;
+        }
+
+
+ /* ------------------- MOBILE VIEW  ------------------- */
+ 
+ @media only screen and (max-width: 768px) {
+ 
+    main {
+        flex-direction: column;
+    }
+ 
+    .right-panel {
+        display: none;
+    }
+
+    .left-panel {
+        display: none;
+    }
+ }
+ 
