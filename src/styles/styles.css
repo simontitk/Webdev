@@ -13,7 +13,6 @@ a {
     color: inherit;
 }
 
-
 /* ------------------- HEADER ------------------- */
 
 header {
@@ -30,14 +29,11 @@ header {
     width: 100%;
 }
 
-
-
 .header-logo {
     text-align: center;
     font-size: 40px;
     width: 20%;
 }
-
 
 .header-lists {
     display: flex;
@@ -47,7 +43,6 @@ header {
     width: 80%;
 }
 
-
 .header-links {
     display: flex;
     flex-direction: row;
@@ -55,20 +50,21 @@ header {
     padding: 0px;
 }
 
-
 .header-links li {
     padding: 20px;
     list-style-type: none;
-
 }
-
 
 .header-links li:hover {
     background-color: #65b0fb;
 }
 
+
+/*--------------- MAIN PANELS -----------------*/
+
 main {
     display: flex;
+    margin-top: 70px;
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
@@ -82,15 +78,18 @@ main {
   }
 
 .left-panel {
-    background-color: black;
+    background-color: white;
+    min-width: 15%;
+}
 
+.center-panel {
+    min-width: 70%;
 }
 
 .right-panel {
-    background-color: black;
+    background-color: white;
+    min-width: 15%;
 }
-
-
 
 /* ------------------- FOOTER ------------------- */
 
@@ -101,3 +100,18 @@ main {
     background-color: #D3D3D3;
     min-width: 100%;
  }
+
+
+ /* ------------------- MOBILE VIEW  ------------------- */
+
+ @media only screen and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .right-panel {
+        display: none;
+    }
+ }
+
