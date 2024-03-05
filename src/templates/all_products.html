@@ -11,20 +11,7 @@
     <title>HydroHomies</title>
 </head>
 <body>
-    <header>
-        <div class="header-logo"><a href="">HydroHomies</a></div>
-        <div class="header-lists">
-            <ul class="header-links">
-                <li><a href="./all_products.html">Products</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-            <ul class="header-links">
-                <li><a href="./profile.html"><img src="../../assets/icons/profile.png" alt="profile-picture" height="36px" ></a></li>
-                <li><a href="./index.html"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ></a></li>
-                <li><a href="./shopping_cart.html"><img src="../../assets/icons/shopping-cart.png" alt="shopping-cart-picture" height="36px" ></a></li>
-            </ul>
-        </div>
-
+    <header id="header">
     </header>
 
     <main>
@@ -122,6 +109,7 @@
 
         <div class="center-panel">
             <section class="product-section">
+                
             </section>
         </div>
 
@@ -129,7 +117,9 @@
 
     </main>
     <footer id="footer">
+
     </footer>
+    <script type="module" src="../scripts/setup.js"></script>
     <script>
         const toggleButtons = document.querySelectorAll(".filter-collapse-button");
         const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
@@ -139,90 +129,31 @@
             };
         }
     </script>
-    <script>
-        const PRODUCTS = [
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-            {
-                name: "Liquid Death",
-                price: 300,
-                img: "Liquid_Death_12x500ml.jpg",
-                imgAlt: "Liquid Death",
-                quantity: 12,
-                volume: 0.5
-            },
-        ];
+    <script src="../scripts/cart.js"></script>
+    <script type="module">
+        import {getProducts} from "../scripts/products.js"
+
+        const PRODUCTS = getProducts();
 
         const createProductCard = (product) => {
             return (
                 `<div class="product-card">
                     <div class="product-img-container">
                         <img 
-                            src="../../images/${product.img}" 
-                            alt="${product.imgAlt}"
-                            width="260px">
+                            src="../../images/${product.picture}" 
+                            alt="${product.description}"
+                            height="260px"
+                            class="product-image">
                     </div>
                     <div class="product-name-container">
-                        <span>${product.name}</span>
-                        <span>${product.quantity}x${product.volume}L</span>
+                        <span class="product-name">${product.name}</span>
+                        <span>${product.quantity}x${product.size}ml</span>
                     </div>
                     <div class="product-purchase-container">
-                        <span>${product.price} DKK</span>
-                        <img src="../../assets/icons/shopping-cart.png" width="50px" alt="">
+                        <span class="product-price">${product.price} DKK</span>
+                        <button class="add-to-cart-button">
+                            <img src="../../assets/icons/shopping-cart.png" width="50px" height="50px" alt="">
+                        </button>
                     </div>
                 </div>`
             );

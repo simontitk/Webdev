@@ -1,0 +1,350 @@
+export function getProducts() {
+    return [
+        {
+            "picture": "Buxton_1x750ml.jpg",
+            "name": "Buxton mineral water",
+            "brand": "Buxton",
+            "description": "The number 1 British natural mineral water",
+            "size": 750.0,
+            "quantity": 1,
+            "categories": [
+                "mineral water",
+                "still"
+            ],
+            "price": 9.95,
+            "id": 0
+        },
+        {
+            "picture": "aqua-dor_mineralwater_05l.jpg.jpeg",
+            "name": "Aqua d'Or mineral water",
+            "brand": "Aqua d'Or",
+            "description": "Mineral water from Danish Aqua d'Or",
+            "size": 500.0,
+            "quantity": 1,
+            "categories": [
+                "mineral water",
+                "still"
+            ],
+            "price": 14.95,
+            "id": 1
+        },
+        {
+            "picture": "aqua-dor-brus-citrus03l.jpeg",
+            "name": "Aqua d'Or sparkling water  lemon",
+            "brand": "Aqua d'Or",
+            "description": "Refreshing sparkling mineral water from Denmark with a mild taste of lemon",
+            "size": 300.0,
+            "quantity": 1,
+            "categories": [
+                "mineral water",
+                "sparkling",
+                "flavoured",
+                "lemon"
+            ],
+            "price": 14.95,
+            "id": 2
+        },
+        {
+            "picture": "Raml\u00f6sa_with_citrus_Carbonated_33.png",
+            "name": "Raml\u00f6sa Premium Citrus Brus",
+            "brand": "Raml\u00f6sa",
+            "description": "Carbonated mineral water with a hint of citrus",
+            "size": 330.0,
+            "quantity": "1",
+            "categories": [
+                "mieral water",
+                "carboranted",
+                "flavoured",
+                "citrus"
+            ],
+            "price": 14.95,
+            "id": 3
+        },
+        {
+            "picture": "Raml\u00f6sa_with_citrus_Carbonated_033x24.png",
+            "name": "Raml\u00f6sa Premium Citrus Brus",
+            "brand": "Raml\u00f6sa",
+            "description": "Carbonated mineral water with a hint of citrus",
+            "size": 330.0,
+            "quantity": "24",
+            "categories": [
+                "mieral water",
+                "carboranted",
+                "flavoured",
+                "citrus"
+            ],
+            "price": 19.95,
+            "id": 4
+        },
+        {
+            "picture": "Rema1000_Hope_Mineralwater_50.png",
+            "name": "Hope",
+            "brand": "Rema1000",
+            "description": "Kildevand, REMA 1000 uden brus",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mieral water"
+            ],
+            "price": 14.95,
+            "id": 5
+        },
+        {
+            "picture": "Blue_Keld_pinapple_mango_Carbonated_Flavoured1.png",
+            "name": "Blue Keld Ananas & Mango",
+            "brand": "Blue Keld",
+            "description": "Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour",
+            "size": 1000.0,
+            "quantity": "1",
+            "categories": [
+                "carbonated water",
+                "flavoured",
+                "pinapple",
+                "mango"
+            ],
+            "price": 19.95,
+            "id": 6
+        },
+        {
+            "picture": "Blue_Keld_Kiwi_Lime_Carbonated_Flavored1.png",
+            "name": "Blue Keld Kiwi & Lime",
+            "brand": "Blue Keld",
+            "description": "Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour",
+            "size": 1000.0,
+            "quantity": "1",
+            "categories": [
+                "carbonated water",
+                "flavoured",
+                "kiwi",
+                "lime"
+            ],
+            "price": 19.95,
+            "id": 7
+        },
+        {
+            "picture": "Salling_mineralwater_05.png",
+            "name": "Salling Vand",
+            "brand": "Salling",
+            "description": "Salling mineral water, ideal to bring along when on the go.",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 9.95,
+            "id": 8
+        },
+        {
+            "picture": "Salling_mineralwater_2.png",
+            "name": "Salling Vand",
+            "brand": "Salling",
+            "description": "Salling mineral water, ideal for the dinner table.",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 14.95,
+            "id": 9
+        },
+        {
+            "picture": "Kildev\u00e6ld_mineralwater_05.png",
+            "name": "Kildev\u00e6ld",
+            "brand": "Carlberg Kildev\u00e6ld",
+            "description": "Refreshing, natural mineral water. Tapped directly from an underground spring on the jutlandish heath.",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 9.95,
+            "id": 10
+        },
+        {
+            "picture": "Egekilde_mineralwater_05.png",
+            "name": "Egekilde",
+            "brand": "Unibrew Egekilde",
+            "description": "Mineral water from the underground of the forrests of southern Sj\u00e6lland.",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 9.95,
+            "id": 11
+        },
+        {
+            "picture": "Egekilde_mineralwater_15.png",
+            "name": "Egekilde",
+            "brand": "Unibrew Egekilde",
+            "description": "Mineral water from the underground of the forrests of southern Sj\u00e6lland.",
+            "size": 1500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 14.95,
+            "id": 12
+        },
+        {
+            "picture": "Bottlers-spring_mineralwater_05.png",
+            "name": "Spring",
+            "brand": "Bottlers",
+            "description": "Mineral water from the undergrounds of Ireland.",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 19.95,
+            "id": 13
+        },
+        {
+            "picture": "Bottlers-spring_mineralwater_05x24.png",
+            "name": "Spring",
+            "brand": "Bottlers",
+            "description": "Mineral water from the undergrounds of Ireland.",
+            "size": 500.0,
+            "quantity": "24",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 14.95,
+            "id": 14
+        },
+        {
+            "picture": "Harmless_Harvest_Coconutwater_036x24.png",
+            "name": "Organic Coconut Water",
+            "brand": "Harmless Harvest",
+            "description": "Nothing quenches thirst like the Original Coconut Water from Harmless Harvest.",
+            "size": 360.0,
+            "quantity": "24",
+            "categories": [
+                "mineral water",
+                "coconut",
+                "flavoured"
+            ],
+            "price": 19.95,
+            "id": 15
+        },
+        {
+            "picture": "Harmless_Harvest_Coconutwater_036.png",
+            "name": "Organic Coconut Water",
+            "brand": "Harmless Harvest",
+            "description": "Nothing quenches thirst like the Original Coconut Water from Harmless Harvest.",
+            "size": 360.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water",
+                "coconut",
+                "flavoured"
+            ],
+            "price": 9.95,
+            "id": 16
+        },
+        {
+            "price": 14.95,
+            "id": 17
+        },
+        {
+            "picture": "Essentia_Ionizedwater_extra_1.png",
+            "name": "Essentia Ionized Water",
+            "brand": "Essentia",
+            "description": "No matter the occasion, it's simply the best bollted water to drink.",
+            "size": 1000.0,
+            "quantity": "1",
+            "categories": [
+                "electrolyte",
+                "ionized"
+            ],
+            "price": 19.95,
+            "id": 18
+        },
+        {
+            "picture": "Essentia_Ionizedwater_extra_2.png",
+            "name": "Essentia Ionized Water",
+            "brand": "Essentia",
+            "description": "No matter the occasion, it's simply the best bollted water to drink.",
+            "size": 2000.0,
+            "quantity": "1",
+            "categories": [
+                "electrolyte",
+                "ionized"
+            ],
+            "price": 14.95,
+            "id": 19
+        },
+        {
+            "picture": "Suncoast_Lightwater_extra_12x6.png",
+            "name": "Lightwater Electrolyte Enhanced Water",
+            "brand": "SunCoastbrands",
+            "description": "Pure water and electrolytes(calcium, potassium and magnesium).",
+            "size": 1200.0,
+            "quantity": "6",
+            "categories": [
+                "electrolyte",
+                "purewater"
+            ],
+            "price": 14.95,
+            "id": 20
+        },
+        {
+            "price": 19.95,
+            "id": 21
+        },
+        {
+            "picture": "Suncoast_Lightwater_extra_12.png",
+            "name": "Lightwater Electrolyte Enhanced Water",
+            "brand": "SunCoastbrands",
+            "description": "Pure water and electrolytes(calcium, potassium and magnesium).",
+            "size": 1200.0,
+            "quantity": "1",
+            "categories": [
+                "electrolyte",
+                "purewater"
+            ],
+            "price": 9.95,
+            "id": 22
+        },
+        {
+            "picture": "Cocacola_SmartWater_ekstra_1.png",
+            "name": "Smart Water .L",
+            "brand": "Coca Cola - Smart Water",
+            "description": "Actice hydration for when you're staying active. It's everything you want from bottled water - pure hydrating and crisp.",
+            "size": 1000.0,
+            "quantity": "1",
+            "categories": [
+                "electrolyte",
+                "antioxidant"
+            ],
+            "price": 14.95,
+            "id": 23
+        },
+        {
+            "picture": "Denice_mineralwater_05.png",
+            "name": "Denice mineralvand",
+            "brand": "Denice",
+            "description": "100% natural mineral water of the highest quality from the AQUA D'OR source. 160meters betlow the jutlandish heath.",
+            "size": 500.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 14.95,
+            "id": 24
+        },
+        {
+            "picture": "Denice_mineralwater_2.png",
+            "name": "Denice mineralvand",
+            "brand": "Denice",
+            "description": "100% natural mineral water of the highest quality from the AQUA D'OR source. 160meters betlow the jutlandish heath.",
+            "size": 2000.0,
+            "quantity": "1",
+            "categories": [
+                "mineral water"
+            ],
+            "price": 19.95,
+            "id": 25
+        }
+    ]
+}
