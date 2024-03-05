@@ -333,6 +333,23 @@ export function createProducts() {
             "rating": 3,
             "price": 19.95,
             "id": 25
+        },
+
+        {
+            "picture": "belle_delphine_bath_water.png",
+            "name": "Belle Delphine Bath Water",
+            "brand": "Belle Delphine",
+            "description": "Belle Delphine's Bath Water. It is good for you.",
+            "size": 100.0,
+            "quantity": 1,
+            "categories": [
+                "mineral"
+            ],
+            "rating": 5,
+            "price": 999.95,
+            "id": 26
         }
+
     ]);
 }
+
