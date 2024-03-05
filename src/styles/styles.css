@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Poppins';
     margin: 0;
@@ -7,14 +6,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
+ 
 a {
     text-decoration: none;
     color: inherit;
 }
 
 /* ------------------- HEADER ------------------- */
-
+ 
 header {
     display: flex;
     color: white;
@@ -58,6 +57,9 @@ header {
 .header-links li:hover {
     background-color: #65b0fb;
 }
+ 
+
+/* ------------------- MAIN ------------------- */
 
 
 /*--------------- MAIN PANELS -----------------*/
@@ -71,11 +73,7 @@ main {
     flex: 1;
     width: 100vw;
 }
-
-.center-panel {
-    margin-top: 70px; /* Adjust this value as needed */
-    min-width: 80%;
-  }
+ 
 
 .left-panel {
     background-color: white;
@@ -84,16 +82,18 @@ main {
 
 .center-panel {
     min-width: 70%;
+
 }
 
+ 
 .right-panel {
     background-color: white;
     min-width: 15%;
 }
 
 /* ------------------- FOOTER ------------------- */
-
-
+ 
+ 
  footer {
     flex-shrink: 0;
     height: 60px;
@@ -101,7 +101,7 @@ main {
     min-width: 100%;
  }
 
-
+ 
  /* ------------------- MOBILE VIEW  ------------------- */
 
  @media only screen and (max-width: 768px) {
