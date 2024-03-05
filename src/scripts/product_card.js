@@ -1,7 +1,13 @@
 export function createProductCard(product) {
     return (
         `<div class="product-card">
-            <div class="product-name-container">
+            <div class="rating-icon">
+                <img src="../../assets/icons/droplet.png" alt="icon of a water droplet" width="50px">
+            </div>
+            <div class="rating-number">
+                 ${product.rating}
+            </div>
+            <div class="product-display" id=${product.id}>
                 <div class="product-img-container">
                     <img 
                         src="../../images/${product.picture}" 
@@ -9,15 +15,20 @@ export function createProductCard(product) {
                         height="260px"
                         class="product-image">
                 </div>
-                <span class="product-name">${product.name}</span>
-                <span class="product-size">${product.quantity} x ${product.size} ml</span>
+                <div class="product-name-container">
+                    <span class="product-name">${product.name}</span>
+                    <span class="product-size">${product.quantity} x ${product.size} ml</span>
+                </div>
             </div>
             <div class="product-purchase-container">
                 <span class="product-price">${product.price} DKK</span>
                 <button class="add-to-cart-button">
-                    <img src="../../assets/icons/shopping-cart.png" width="50px" height="50px" alt="">
+                    Add to cart
                 </button>
             </div>
         </div>`
     );
 }
+
+// alternative: icon
+// <img src="../../assets/icons/basket.png" width="40px" height="40px" alt="Icon of a shopping cart">

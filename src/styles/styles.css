@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 
@@ -42,6 +43,7 @@ li {
 /* ------------------- HEADER ------------------- */
  
 .header-container {
+    z-index: 1000;
     display: flex;
     color: white;
     flex-direction: row;
