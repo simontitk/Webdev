@@ -81,7 +81,7 @@ function addItemToCart(title, price, imageSrc) {
         cartRow.innerHTML = cartRowContents
     cartItemsContainer.append(cartRow)
     cartRow.getElementsByClassName('button-delete')[0].addEventListener('click', removeCartItem)
-    cartRow.getElementsByClassName('form-control')[0].addEventListener('change', quan)
+    cartRow.getElementsByClassName('form-control')[0].addEventListener('change', quantityChanged)
 }
 
 function updateCartTotal() {
