@@ -1,7 +1,7 @@
 :root {
     --main-light-gradient: linear-gradient(to left, #87C4FF, #6cb5ff);
-    --main-dark-gradient: linear-gradient(1deg, #365486, #3e5d94);   
-    --main-light-blue:  #87C4FF;
+    --main-dark-gradient: linear-gradient(1deg, #365486, #3e5d94);
+    --main-light-blue: #87C4FF;
     --main-dark-blue: #365486;
 }
 
@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 
@@ -29,7 +30,7 @@ body {
     background: linear-gradient(to right, #42649e, #4d72b1);
     color: floralwhite;
 }
- 
+
 a {
     text-decoration: none;
     color: inherit;
@@ -40,7 +41,7 @@ li {
 }
 
 /* ------------------- HEADER ------------------- */
- 
+
 .header-container {
     display: flex;
     color: white;
@@ -84,7 +85,7 @@ li {
 .header-links li:hover {
     background-color: #65b0fb;
 }
- 
+
 
 
 /*--------------- MAIN PANELS -----------------*/
@@ -99,7 +100,7 @@ main {
     width: 100vw;
     margin-top: 70px;
 }
- 
+
 
 .left-panel {
     background-color: white;
@@ -108,7 +109,6 @@ main {
 
 .center-panel {
     min-width: 70%;
-
 }
 
 .right-panel {
@@ -153,10 +153,10 @@ main {
     align-items: center;
 }
 
- 
- /* ------------------- MOBILE VIEW  ------------------- */
 
- @media only screen and (max-width: 768px) {
+/* ------------------- MOBILE VIEW  ------------------- */
+
+@media only screen and (max-width: 768px) {
 
     main {
         flex-direction: column;
@@ -170,5 +170,4 @@ main {
         flex-direction: column;
     }
 
- }
-
+}

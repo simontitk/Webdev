@@ -1,5 +1,5 @@
 export function createProducts() {
-    return [
+    return ([
         {
             "picture": "Buxton_1x750ml.jpg",
             "name": "Buxton mineral water",
@@ -11,6 +11,7 @@ export function createProducts() {
                 "mineral",
                 "still"
             ],
+            "rating": 5,
             "price": 9.95,
             "id": 0
         },
@@ -25,6 +26,7 @@ export function createProducts() {
                 "mineral",
                 "still"
             ],
+            "rating": 2,
             "price": 14.95,
             "id": 1
         },
@@ -40,6 +42,7 @@ export function createProducts() {
                 "carbonated",
                 "flavoured"
             ],
+            "rating": 3,
             "price": 14.95,
             "id": 2
         },
@@ -55,6 +58,7 @@ export function createProducts() {
                 "carbonated",
                 "flavoured"
             ],
+            "rating": 4,
             "price": 14.95,
             "id": 3
         },
@@ -70,6 +74,7 @@ export function createProducts() {
                 "carbonated",
                 "flavoured"
             ],
+            "rating": 3,
             "price": 19.95,
             "id": 4
         },
@@ -83,6 +88,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 5,
             "price": 14.95,
             "id": 5
         },
@@ -97,6 +103,7 @@ export function createProducts() {
                 "carbonated",
                 "flavoured"
             ],
+            "rating": 2,
             "price": 19.95,
             "id": 6
         },
@@ -111,6 +118,7 @@ export function createProducts() {
                 "carbonated",
                 "flavoured"
             ],
+            "rating": 4,
             "price": 19.95,
             "id": 7
         },
@@ -124,6 +132,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 3,
             "price": 9.95,
             "id": 8
         },
@@ -137,6 +146,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 5,
             "price": 14.95,
             "id": 9
         },
@@ -150,6 +160,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 4,
             "price": 9.95,
             "id": 10
         },
@@ -163,6 +174,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 3,
             "price": 9.95,
             "id": 11
         },
@@ -176,6 +188,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 1,
             "price": 14.95,
             "id": 12
         },
@@ -189,6 +202,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 4,
             "price": 19.95,
             "id": 13
         },
@@ -203,6 +217,7 @@ export function createProducts() {
                 "mineral",
                 "flavoured"
             ],
+            "rating": 5,
             "price": 19.95,
             "id": 15
         },
@@ -217,6 +232,7 @@ export function createProducts() {
                 "mineral",
                 "flavoured"
             ],
+            "rating": 3,
             "price": 9.95,
             "id": 16
         },
@@ -230,6 +246,7 @@ export function createProducts() {
             "categories": [
                 "electrolyte"
             ],
+            "rating": 1,
             "price": 19.95,
             "id": 18
         },
@@ -243,6 +260,7 @@ export function createProducts() {
             "categories": [
                 "electrolyte"
             ],
+            "rating": 5,
             "price": 14.95,
             "id": 19
         },
@@ -256,6 +274,7 @@ export function createProducts() {
             "categories": [
                 "electrolyte"
             ],
+            "rating": 4,
             "price": 14.95,
             "id": 20
         },
@@ -269,6 +288,7 @@ export function createProducts() {
             "categories": [
                 "electrolyte"
             ],
+            "rating": 2,
             "price": 9.95,
             "id": 22
         },
@@ -282,6 +302,7 @@ export function createProducts() {
             "categories": [
                 "electrolyte"
             ],
+            "rating": 1,
             "price": 14.95,
             "id": 23
         },
@@ -295,6 +316,7 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 2,
             "price": 14.95,
             "id": 24
         },
@@ -308,8 +330,25 @@ export function createProducts() {
             "categories": [
                 "mineral"
             ],
+            "rating": 3,
             "price": 19.95,
             "id": 25
+        },
+
+        {
+            "picture": "belle_delphine_bath_water.png",
+            "name": "Belle Delphine Bath Water",
+            "brand": "Belle Delphine",
+            "description": "Belle Delphine's Bath Water. It is good for you.",
+            "size": 100.0,
+            "quantity": 1,
+            "categories": [
+                "mineral"
+            ],
+            "rating": 5,
+            "price": 999.95,
+            "id": 26
         }
     ]
+    );
 }
