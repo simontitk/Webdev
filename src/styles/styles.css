@@ -73,17 +73,18 @@ main {
     justify-content: center;
     flex: 1;
     width: 100vw;
+    margin-top: 70px; /* extra added cause of he fixed heading*/
 }
 
 .left-panel {
-    background-color: black;
-    min-width: 20px;
+    background-color: white;
+    min-width: 20%;
 
 }
 
 .right-panel {
-    background-color: black;
-    min-width: 20px;
+    background-color: white;
+    min-width: 20%;
 }
 
 
