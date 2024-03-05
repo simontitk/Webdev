@@ -31,9 +31,8 @@ h2 {
 }
 
 input {
-    width: 80%; /* Set the width to 100% of the container */
-    /* Optionally, you can add other styling properties */
-    padding: 5px; /* Add padding for better visual appearance */
+    width: 80%; 
+    padding: 5px; 
     box-sizing: border-box; /* Include padding and border in the width calculation */
     margin-bottom: 5px;
   }
