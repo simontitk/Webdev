@@ -8,7 +8,7 @@ export function createProducts() {
             "size": 750.0,
             "quantity": 1,
             "categories": [
-                "mineral water",
+                "mineral",
                 "still"
             ],
             "price": 9.95,
@@ -22,7 +22,7 @@ export function createProducts() {
             "size": 500.0,
             "quantity": 1,
             "categories": [
-                "mineral water",
+                "mineral",
                 "still"
             ],
             "price": 14.95,
@@ -36,10 +36,9 @@ export function createProducts() {
             "size": 300.0,
             "quantity": 1,
             "categories": [
-                "mineral water",
-                "sparkling",
-                "flavoured",
-                "lemon"
+                "mineral",
+                "carbonated",
+                "flavoured"
             ],
             "price": 14.95,
             "id": 2
@@ -50,12 +49,11 @@ export function createProducts() {
             "brand": "Raml\u00f6sa",
             "description": "Carbonated mineral water with a hint of citrus",
             "size": 330.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mieral water",
-                "carboranted",
-                "flavoured",
-                "citrus"
+                "mineral",
+                "carbonated",
+                "flavoured"
             ],
             "price": 14.95,
             "id": 3
@@ -66,12 +64,11 @@ export function createProducts() {
             "brand": "Raml\u00f6sa",
             "description": "Carbonated mineral water with a hint of citrus",
             "size": 330.0,
-            "quantity": "24",
+            "quantity": 24,
             "categories": [
-                "mieral water",
-                "carboranted",
-                "flavoured",
-                "citrus"
+                "mineral",
+                "carbonated",
+                "flavoured"
             ],
             "price": 19.95,
             "id": 4
@@ -82,9 +79,9 @@ export function createProducts() {
             "brand": "Rema1000",
             "description": "Kildevand, REMA 1000 uden brus",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mieral water"
+                "mineral"
             ],
             "price": 14.95,
             "id": 5
@@ -95,12 +92,10 @@ export function createProducts() {
             "brand": "Blue Keld",
             "description": "Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour",
             "size": 1000.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "carbonated water",
-                "flavoured",
-                "pinapple",
-                "mango"
+                "carbonated",
+                "flavoured"
             ],
             "price": 19.95,
             "id": 6
@@ -111,12 +106,10 @@ export function createProducts() {
             "brand": "Blue Keld",
             "description": "Mild carbonation with fresh taste of fruit without sugar, conservatives or artificial colour",
             "size": 1000.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "carbonated water",
-                "flavoured",
-                "kiwi",
-                "lime"
+                "carbonated",
+                "flavoured"
             ],
             "price": 19.95,
             "id": 7
@@ -127,9 +120,9 @@ export function createProducts() {
             "brand": "Salling",
             "description": "Salling mineral water, ideal to bring along when on the go.",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 9.95,
             "id": 8
@@ -140,9 +133,9 @@ export function createProducts() {
             "brand": "Salling",
             "description": "Salling mineral water, ideal for the dinner table.",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 14.95,
             "id": 9
@@ -153,9 +146,9 @@ export function createProducts() {
             "brand": "Carlberg Kildev\u00e6ld",
             "description": "Refreshing, natural mineral water. Tapped directly from an underground spring on the jutlandish heath.",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 9.95,
             "id": 10
@@ -166,9 +159,9 @@ export function createProducts() {
             "brand": "Unibrew Egekilde",
             "description": "Mineral water from the underground of the forrests of southern Sj\u00e6lland.",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 9.95,
             "id": 11
@@ -179,9 +172,9 @@ export function createProducts() {
             "brand": "Unibrew Egekilde",
             "description": "Mineral water from the underground of the forrests of southern Sj\u00e6lland.",
             "size": 1500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 14.95,
             "id": 12
@@ -192,9 +185,9 @@ export function createProducts() {
             "brand": "Bottlers",
             "description": "Mineral water from the undergrounds of Ireland.",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 19.95,
             "id": 13
@@ -205,10 +198,9 @@ export function createProducts() {
             "brand": "Harmless Harvest",
             "description": "Nothing quenches thirst like the Original Coconut Water from Harmless Harvest.",
             "size": 360.0,
-            "quantity": "24",
+            "quantity": 24,
             "categories": [
-                "mineral water",
-                "coconut",
+                "mineral",
                 "flavoured"
             ],
             "price": 19.95,
@@ -220,10 +212,9 @@ export function createProducts() {
             "brand": "Harmless Harvest",
             "description": "Nothing quenches thirst like the Original Coconut Water from Harmless Harvest.",
             "size": 360.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water",
-                "coconut",
+                "mineral",
                 "flavoured"
             ],
             "price": 9.95,
@@ -235,10 +226,9 @@ export function createProducts() {
             "brand": "Essentia",
             "description": "No matter the occasion, it's simply the best bollted water to drink.",
             "size": 1000.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "electrolyte",
-                "ionized"
+                "electrolyte"
             ],
             "price": 19.95,
             "id": 18
@@ -249,10 +239,9 @@ export function createProducts() {
             "brand": "Essentia",
             "description": "No matter the occasion, it's simply the best bollted water to drink.",
             "size": 2000.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "electrolyte",
-                "ionized"
+                "electrolyte"
             ],
             "price": 14.95,
             "id": 19
@@ -263,10 +252,9 @@ export function createProducts() {
             "brand": "SunCoastbrands",
             "description": "Pure water and electrolytes(calcium, potassium and magnesium).",
             "size": 1200.0,
-            "quantity": "6",
+            "quantity": 6,
             "categories": [
-                "electrolyte",
-                "purewater"
+                "electrolyte"
             ],
             "price": 14.95,
             "id": 20
@@ -277,10 +265,9 @@ export function createProducts() {
             "brand": "SunCoastbrands",
             "description": "Pure water and electrolytes(calcium, potassium and magnesium).",
             "size": 1200.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "electrolyte",
-                "purewater"
+                "electrolyte"
             ],
             "price": 9.95,
             "id": 22
@@ -291,10 +278,9 @@ export function createProducts() {
             "brand": "Coca Cola - Smart Water",
             "description": "Actice hydration for when you're staying active. It's everything you want from bottled water - pure hydrating and crisp.",
             "size": 1000.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "electrolyte",
-                "antioxidant"
+                "electrolyte"
             ],
             "price": 14.95,
             "id": 23
@@ -305,9 +291,9 @@ export function createProducts() {
             "brand": "Denice",
             "description": "100% natural mineral water of the highest quality from the AQUA D'OR source. 160meters betlow the jutlandish heath.",
             "size": 500.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 14.95,
             "id": 24
@@ -318,9 +304,9 @@ export function createProducts() {
             "brand": "Denice",
             "description": "100% natural mineral water of the highest quality from the AQUA D'OR source. 160meters betlow the jutlandish heath.",
             "size": 2000.0,
-            "quantity": "1",
+            "quantity": 1,
             "categories": [
-                "mineral water"
+                "mineral"
             ],
             "price": 19.95,
             "id": 25
