@@ -95,7 +95,9 @@ document.getElementById("cart-button").addEventListener("click", function () {
 
 
 
-const product = ALL_PRODUCTS.find(p => p.id === 26);
+let productID = localStorage.getItem("productId");
+productID = productID ? Number(productID) : 26;
+const product = ALL_PRODUCTS.find(p => p.id === productID);
 
 document.getElementById("name").textContent = product.name;
 document.getElementById("price").textContent = `${product.price} DKK`;
