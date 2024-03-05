@@ -21,7 +21,7 @@ header {
     font-size: 25px;
     justify-content: space-between;
     align-items: center;
-    background-color: #87C4FF;
+    background: linear-gradient(to left, #87C4FF, #6cb5ff);
     height: 70px;
     overflow: hidden;
     position: fixed;
@@ -72,6 +72,7 @@ main {
     justify-content: center;
     flex: 1;
     width: 100vw;
+    margin-top: 70px;
 }
  
 
@@ -85,22 +86,22 @@ main {
 
 }
 
- 
 .right-panel {
     background-color: white;
     min-width: 15%;
 }
 
 /* ------------------- FOOTER ------------------- */
- 
- 
+
+
+
  footer {
+
     flex-shrink: 0;
     height: 60px;
     background-color: #D3D3D3;
     min-width: 100%;
- }
-
+}
  
  /* ------------------- MOBILE VIEW  ------------------- */
 
@@ -114,4 +115,3 @@ main {
         display: none;
     }
  }
-
