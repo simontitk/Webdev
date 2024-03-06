@@ -24,15 +24,6 @@ insertProductCards(ALL_PRODUCTS);
 let intervalId;
 
 
-document.getElementById("minus-quantity").addEventListener("click", function () {
-    const quantityElement = document.getElementById("quantity-input");
-    let quantity = quantityElement.value;
-    if (quantity > 1) {
-        quantity--;
-        quantityElement.value = quantity;
-    }
-});
-
 document.getElementById("minus-quantity").addEventListener("mousedown", function () {
     const quantityElement = document.getElementById("quantity-input");
     intervalId = setInterval(function () {
@@ -55,15 +46,6 @@ document.getElementById("minus-quantity").addEventListener("mouseleave", functio
 });
 
 
-document.getElementById("plus-quantity").addEventListener("click", function () {
-    const quantityElement = document.getElementById("quantity-input");
-    let quantity = quantityElement.value;
-    quantity++
-    quantityElement.value = quantity;
-});
-
-
-
 document.getElementById("plus-quantity").addEventListener("mousedown", function () {
     const quantityElement = document.getElementById("quantity-input");
     intervalId = setInterval(function () {
@@ -83,14 +65,6 @@ document.getElementById("plus-quantity").addEventListener("mouseup", function ()
 
 document.getElementById("plus-quantity").addEventListener("mouseleave", function () {
     clearInterval(intervalId);
-});
-
-
-document.getElementById("cart-button").addEventListener("click", function () {
-    const quantity = Number(document.getElementById("quantity").textContent);
-    localStorage.setItem("addedQuantity", quantity);
-    window.location.href = "./shopping_cart.html";
-    console.log(quantity);
 });
 
 
