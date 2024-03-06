@@ -17,6 +17,16 @@ for (let i = 0; i < toggleButtons.length; i++) {
 
 // populating the product display and filtering it
 
+const attachProductPages = () => {
+    [...document.querySelectorAll(".product-display")].forEach(display => {
+        display.onclick =  () => {
+            localStorage.setItem("productId", display.id);
+            location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';  // change this to an anchor?
+        }
+    });
+}
+
+
 const PRODUCTS = createProducts();
 const productSection = document.querySelector(".product-section");
 
@@ -27,13 +37,7 @@ const insertProductCards = (products) => {
 }
 
 insertProductCards(PRODUCTS);
-
-[...document.querySelectorAll(".product-display")].forEach(display => {
-    display.onclick =  () => {
-        localStorage.setItem("productId", display.id);
-        location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';  // change this to an anchor?
-    }
-});
+attachProductPages();
 
 const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
 const minPriceInput = document.getElementById("min-price-input");
@@ -48,12 +52,14 @@ const resetFilterButton = document.getElementById("reset-filter-button");
 filterButton.onclick = () => {
     let filteredProducts = filterProducts(PRODUCTS);
     insertProductCards(filteredProducts);
+    attachProductPages();
 };
 
 resetFilterButton.onclick = () => {
     categoryCheckboxes.forEach(checkbox => checkbox.checked = true);
     [...document.querySelectorAll(".filter-input")].forEach(input => input.value = "");
 }
+
 
 const filterProducts = (products) => {
     let minPrice = Number(minPriceInput.value);
