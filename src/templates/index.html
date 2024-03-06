@@ -4,55 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/product_card.css">
+    <link rel="stylesheet" href="../styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>HydroHomies</title>
 </head>
 <body>
-    <header>
-        <div class="header-logo"><a href="">HydroHomies</a></div>
-        <div class="header-lists">
-            <ul class="header-links">
-                <li><a href="./all_products.html">Products</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-            <ul class="header-links">
-                <li><a href="./profile.html"><img src="../../assets/icons/profile.png" alt="profile-picture" height="36px" ></a></li>
-                <li><a href="./index.html"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ></a></li>
-                <li><a href="./shopping_cart.html"><img src="../../assets/icons/shopping-cart.png" alt="shopping-cart-picture" height="36px" ></a></li>
-            </ul>
-        </div>
+    <header id="header">
     </header>
-
     <main>
-        <div class="left-panel"></div>
-        <div class="center-panel">
-            <img src="../../assets/icons/heart másolata.png" alt="exit" height="1000px" ></a>
+        <div class="left-panel">
         </div>
-        <div class="right-panel"></div>
-
+        <div class="center-panel">
+            <section class="landing-section">
+                <section class="campaign"></section>
+                <section class="frontpage-section" id="category-section">
+                    <h1 class="frontpage-section-header">
+                        Browse our categories:
+                    </h1>
+                    <div class="category-display">
+                        <div class="category-card category-card-carbonated">
+                            <div class="category-name">Carbonated</div>
+                            <div class="category-description">Description for Carbonated Description for Carbonated Description for Carbonated </div>
+                        </div>
+                        <div class="category-card category-card-still">
+                            <div class="category-name">Still</div>
+                            <div class="category-description"> Description for Still Description for Still Description for Still</div>
+                        </div>
+                        <div class="category-card category-card-mineral">
+                            <div class="category-name">Mineral</div>
+                            <div class="category-description">Description for Mineral Description for Mineral Description for Mineral </div>
+                        </div>
+                        <div class="category-card category-card-flavoured">
+                            <div class="category-name">Flavoured</div>
+                            <div class="category-description">Description for Flavoured Description for Flavoured Description for Flavoured </div>
+                        </div>
+                        <div class="category-card category-card-electrolyte">
+                            <div class="category-name">Electrolyte</div>
+                            <div class="category-description">Description for Electrolyte Description for Electrolyte Description for Electrolyte</div>
+                        </div>
+                        <div class="category-card category-card-craftwater">
+                            <div class="category-name">Craft water</div>
+                            <div class="category-description">Description for craft water Description for craft water Description for craft water </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="frontpage-section" id="recommendation-section">
+                    <h1 class="frontpage-section-header">
+                        Our recommendations:
+                    </h1>
+                    <div class="offer-display" id="offers"></div>
+                </section>
+            </section>
+        </div>
+        <div class="right-panel">
+        </div>
     </main>
     <footer id="footer">
-        <div class="footer-column-container">
-            <div class="footer-column">
-                <h1>Contact</h1>
-                <ul>
-                    <li>Phone number: +45 12 34 56 78</li>
-                    <li>Email: hydrohomies@hydrohomies.dk</li>
-                    <li>Address: 2300 København, Rued Langgaards Vej 7, Room 4A46 </li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h1>Follow us</h1>
-                <ul>
-                    <li>Reddit: <span><a href="https://www.reddit.com/r/HydroHomies/">r/HydroHomies</a> </li></span>
-                    <li>Instagram: <span><a href="https://www.instagram.com/hydrohomies/">@HydroHomies</a></li></span>
-                    <li>X: <span><a href="https://twitter.com/hydro_homies">@hydro_homies</a></li></span>
-                </ul>
-            </div>
-        </div>
     </footer>
-    
+    <script type="module" src="../scripts/setup.js"></script>
+    <script type="module" src="../scripts/index.js"></script>
+    <script src="../scripts/to_cart.js"></script>
 </body>
 </html>
