@@ -45,9 +45,44 @@
     display: none;
 }
 
+.toggle-button {
+    font-size: 30px;
+    transform: rotate(0deg);
+    transition: transform .1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-button-transformed {
+    transform: rotate(180deg);
+}
+
 .filter-button-container {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #365486;
+    padding: 20px 10px 20px 10px;
+}
+
+.filter-button {
+    width: 200px;
+    border-radius: 10px;
+    border: 0px solid;
+    height: 42px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #87C4FF;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.filter-button:hover {
+    cursor: pointer;
+    background-color: #65b0fb;
 }
 
 

@@ -20,8 +20,7 @@
                 <div class="filter-container">
                     <div class="filter-header">
                         Categories
-                        <button class="filter-collapse-button">X</button>
-                    </div>
+                    <span class="toggle-button"><img src="../../assets/icons/arrow.png" alt="Double arrow for toggling a panel" width="25px"></span>                    </div>
                     <div class="collapsible-filter-inputs">
                         <span><input
                             class="category-checkbox"
@@ -29,7 +28,8 @@
                             checked
                             name="carbonated-checkbox" 
                             id="carbonated-checkbox"
-                            value="carbonated">Carbonated
+                            value="carbonated">
+                            Carbonated
                         </span>
                         <span><input
                             class="category-checkbox"
@@ -37,7 +37,8 @@
                             checked
                             name="still-checkbox" 
                             id="still-checkbox"
-                            value="still">Still
+                            value="still">
+                            Still
                         </span>
                         <span><input
                             class="category-checkbox"
@@ -45,7 +46,8 @@
                             checked 
                             name="mineral-checkbox" 
                             id="mineral-checkbox"
-                            value="mineral">Mineral
+                            value="mineral">
+                            Mineral
                         </span>
                         <span><input
                             class="category-checkbox"
@@ -53,7 +55,8 @@
                             checked 
                             name="flavoured-checkbox" 
                             id="flavoured-checkbox"
-                            value="flavoured">Flavoured
+                            value="flavoured">
+                            Flavoured
                         </span>                        
                         <span><input
                             class="category-checkbox"
@@ -61,7 +64,8 @@
                             checked 
                             name="electrolyte-checkbox" 
                             id="electrolyte-checkbox"
-                            value="electrolyte">Electrolyte
+                            value="electrolyte">
+                            Electrolyte
                         </span>
                         <span><input
                             class="category-checkbox"
@@ -69,15 +73,16 @@
                             checked 
                             name="craft-checkbox" 
                             id="craft-checkbox"
-                            value="craft">Craft water
+                            value="craft">
+                            Craft water
                         </span>                        
                     </div>
                 </div>
                 <div class="filter-container">
                     <div class="filter-header">
                         Price
-                        <button class="filter-collapse-button">X</button>
-                    </div>
+                    <span class="toggle-button"><img src="../../assets/icons/arrow.png" alt="Double arrow for toggling a panel" width="25px"></span>
+                </div>
                     <div class="collapsible-filter-inputs">
                         <span>
                             <input class="filter-input" type="number" name="min-price-input" min=1 max="1000" id="min-price-input" placeholder="From">
@@ -90,7 +95,7 @@
                 <div class="filter-container">
                     <div class="filter-header">
                         Volume
-                        <button class="filter-collapse-button">X</button>
+                        <span class="toggle-button"><img src="../../assets/icons/arrow.png" alt="Double arrow for toggling a panel" width="25px"></span>
                     </div>
                     <div class="collapsible-filter-inputs">
                         <span>
@@ -104,21 +109,21 @@
                 <div class="filter-container">
                     <div class="filter-header">
                         Rating
-                        <button class="filter-collapse-button">X</button>
-                    </div>
-                    <div class="collapsible-filter-inputs">
-                        <span>
+                    <span class="toggle-button"><img src="../../assets/icons/arrow.png" alt="Double arrow for toggling a panel" width="25px"></span>
+                </div>
+                    <span class="collapsible-filter-inputs">
+                            <span style="display: flex;align-items: center;">
                             <input class="filter-input" type="number" name="min-rating-input" min="1" max="5" id="min-rating-input" placeholder="From">
                             &nbsp-&nbsp
                             <input class="filter-input" type="number" name="max-rating-input" min="1" max="5" id="max-rating-input" placeholder="To">
                             &nbsp
                             <img src="../../assets/icons/droplet.png" alt="icon of a water droplet" width="28px">
                         </span>
-                    </div>
+                    </span>
                 </div>
                 <div class="filter-button-container">
-                    <button class="button" id="filter-button">Filter products</button>
-                    <button class="button" id="reset-filter-button">Reset filters</button>
+                    <button class="filter-button" id="filter-button">Filter products</button>
+                    <button class="filter-button" id="reset-filter-button">Reset filters</button>
                 </div>
             </div>
         </div>

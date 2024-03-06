@@ -119,16 +119,19 @@ main {
 
 /* ------------------- FOOTER ------------------- */
 
-
-.footer-column-container {
+.footer-container {
     flex-shrink: 0;
     background-color: #D3D3D3;
     min-width: 100%;
+    font-size: 20px;
+}
+
+.footer-column-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .footer-column-container h1 {
@@ -152,6 +155,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer-description {
+    padding: 20px 10%;
+    text-align: center;
 }
 
 

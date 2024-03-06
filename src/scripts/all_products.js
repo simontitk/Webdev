@@ -6,9 +6,11 @@ import {createProductCard} from "../scripts/product_card.js"
 
 const toggleButtons = document.querySelectorAll(".filter-header");
 const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
-for (let i=0; i<toggleButtons.length; i++) {
+const toggleArrows = document.querySelectorAll(".toggle-button");
+for (let i = 0; i < toggleButtons.length; i++) {
     toggleButtons[i].onclick = () => {
         collapsibleFilterInputs[i].classList.toggle("collapsed-filter-inputs");
+        toggleArrows[i].classList.toggle("toggle-button-transformed");
     };
 }
 
@@ -29,7 +31,7 @@ insertProductCards(PRODUCTS);
 [...document.querySelectorAll(".product-display")].forEach(display => {
     display.onclick =  () => {
         localStorage.setItem("productId", display.id);
-        location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
+        location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';  // change this to an anchor?
     }
 });
 
