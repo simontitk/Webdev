@@ -6,7 +6,7 @@
 .filter-container {
     display: flex;
     flex-direction: column;
-    background-color: #3E758D;
+    background-color:  #365486;
     font-size: 20px;
     min-width: 170px;
     padding: 20px 10px 0px 10px;
@@ -14,12 +14,12 @@
     color: white;
 }
 
-.filter-container input[type="checkbox"] {
+.category-checkbox {
     width: 20px;
     height: 20px;
 }
 
-.filter-container input[type="text"] {
+.filter-input {
     width: 50px;
     height: 30px;
     border-radius: 10px;
@@ -45,9 +45,14 @@
     display: none;
 }
 
+.filter-button-container {
+    display: flex;
+    background-color: #87C4FF;
+}
 
 
 /* CENTER PANEL */
+
 .product-section {
     background-color: rgb(241, 239, 239);
     display: grid;
@@ -57,40 +62,6 @@
     align-items: center;
     justify-items: center; /*!!!!*/
 }
-
-.product-card {
-    background-color: white;
-    width: 300px;
-    min-height: 400px;
-}
-
-.product-img-container {
-    padding-top: 20px;
-    text-align: center;
-}
-
-.product-name-container {
-    font-size: 25px;
-    font-weight: bold;
-    padding: 10px 20px 10px 20px;
-}
-
-.product-purchase-container {
-    font-size: 25px;
-    padding-inline: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.product-purchase-container img {
-    background-color: brown;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-
 
 
  @media only screen and (max-width: 768px) {

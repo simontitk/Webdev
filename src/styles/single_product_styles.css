@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .product {
@@ -112,6 +112,7 @@
     margin-bottom: 0px;
 }
 
+
 .product-name {
     font-size: 32px;
     margin-top: 5px;
@@ -148,17 +149,6 @@
     margin-bottom: 0px;
 }
 
-.more-button {
-    background-color: white;
-    border: none;
-    color: gray;
-    font-size: 16px;
-}
-
-.more-button:hover {
-    color: dimgray;
-}
-
 .product-size {
     display: flex;
     flex-direction: row;
@@ -182,29 +172,6 @@
     text-shadow: rgb(200, 200, 200) 0px 1px 1px;
 }
 
-.share-like {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px;
-
-}
-
-.heart-button {
-    font-size: 30px;
-    background-color: white;
-    border: none;
-    background: linear-gradient(to right, rgb(255, 123, 123), rgb(255, 44, 44));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-right: 10px;
-}
-
-.heart-button:hover {
-    background: linear-gradient(to right, rgb(255, 100, 100), rgb(255, 34, 34));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 
 /* ---------- purchase stuff ----------- */
@@ -232,12 +199,28 @@
     align-items: center;
 }
 
+#quantity-input {
+    border: none;
+    background: none;
+    font-size: 1em;
+    color: inherit;
+    text-align: center;
+    width: 50px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+#quantity-input::-webkit-inner-spin-button,
+#quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .quantity-modifier {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -253,8 +236,6 @@
     background-color: white;
     border: none;
     color: #000;
-    margin-right: 5px;
-    margin-left: 5px;
 }
 
 .quantity-modifier button:hover {
@@ -265,6 +246,31 @@
     color: gray;
     font-size: small;
 }
+
+
+.share-like {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.heart-button {
+    font-size: 40px;
+    background-color: white;
+    border: none;
+    background: linear-gradient(to right, rgb(255, 123, 123), rgb(255, 44, 44));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+}
+
+.heart-button:hover {
+    background: linear-gradient(to right, rgb(255, 100, 100), rgb(255, 34, 34));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 
 /* ---------- suggestion ----------- */
@@ -296,4 +302,29 @@
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .suggested-items {
+        flex-direction: column;
+    }
+
+    .right-panel {
+        display: none;
+    }
+
+    .left-panel {
+        display: none;
+    }
 }

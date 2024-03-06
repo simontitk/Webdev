@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/single_product_styles.css">
+    <link rel="stylesheet" href="../styles/product_card.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,23 +16,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-logo"><a href="">HydroHomies</a></div>
-        <div class="header-lists">
-            <ul class="header-links">
-                <li><a href="./all_products.html">Products</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-            <ul class="header-links">
-                <li><a href="./profile.html"><img src="../../assets/icons/profile.png" alt="profile-picture"
-                            height="36px"></a></li>
-                <li><a href="./index.html"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px"></a>
-                </li>
-                <li><a href="./shopping_cart.html"><img src="../../assets/icons/shopping-cart.png"
-                            alt="shopping-cart-picture" height="36px"></a></li>
-            </ul>
-        </div>
-
+    <header id="header">
     </header>
 
     <main>
@@ -39,39 +24,35 @@
         <div class="center-panel">
             <div class="product">
                 <div class="pictures-rating">
-                    <img src="../../images/belle_delphine_bath_water.png" alt="belle-delphine-bath-water"
-                        class="product-picture">
+                    <img alt="product picture" class="product-picture" id="picture">
                     <div class="rating">
                         <p>Rating</p>
                         <div class="droplets">
-                            <img src="../../assets/icons/droplet.png" alt="">
-                            <img src="../../assets/icons/droplet.png" alt="">
-                            <img src="../../assets/icons/droplet.png" alt="">
-                            <img src="../../assets/icons/droplet.png" alt="">
-                            <img src="../../assets/icons/droplet.png" alt="">
+                            <img id="rating1" alt="droplet">
+                            <img id="rating2" alt="droplet">
+                            <img id="rating3" alt="droplet">
+                            <img id="rating4" alt="droplet">
+                            <img id="rating5" alt="droplet">
                         </div>
-
                     </div>
                 </div>
                 <div class="product-details">
-                    <p class="product-name">Belle Delphine Bathwater</p>
+                    <p class="product-name" id="name"></p>
                     <div class="price">
-                        <p class="pricetag">99 DKK</p>
+                        <p class="pricetag" id="price"></p>
                         <p class="vat">incl. VAT</p>
                     </div>
 
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    <p class="product-description" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do
                         eiusmod
                         tempor incididunt ut labore et dolore aliqua...<button class="more-button">more</button></p>
 
                     <div class="product-size">
-                        <p class="volume">Volume: </p>
-                        <button class="volume-modifier-button">250 ml ▼</button>
+                        <p class="volume" id="size">Volume: </p>
+                        <!-- <button class="volume-modifier-button">250 ml ▼</button> -->
                     </div>
-                    <div class="share-like">
-                        <button class="main-button">Share</button>
-                        <button class="heart-button">❤</button>
-                    </div>
+
                 </div>
 
                 <div class="purchase-details">
@@ -85,13 +66,17 @@
                     <div class="quantity">
                         <p>Quantity</p>
                         <div class="quantity-modifier">
-                            <button class="plus-quantity">+</button>
-                            <p class="quantity-number">1</p>
-                            <button class="minus-quantity">-</button>
+                            <button id="plus-quantity">+</button>
+                            <input id="quantity-input" type="number" min="1" max="999" value="1">
+                            <button id="minus-quantity">-</button>
                         </div>
                         <p class="available">999 available</p>
                     </div>
-                    <button class="main-button">Add to cart</button>
+                    <button class="button" id="cart-button">Add to cart</button>
+                    <div class="share-like">
+                        <button class="button" onclick="alert('Thanks for sharing!')">Share</button>
+                        <button class="heart-button">♡</button>
+                    </div>
                 </div>
             </div>
             <a href="https://en.wikipedia.org/wiki/Water" class="campaign">
@@ -101,27 +86,8 @@
             </a>
 
             <div class="suggestions">
-                <p>Suggestions</p>
-                <div class="suggested-items">
-                    <div class="suggested-item">
-                        <img src="../../images/Liquid_Death_1x500ml.webp" alt="">
-                        <p>Liquid Death</p>
-                        <p>15 DKK</p>
-                    </div>
-
-                    <div class="suggested-item">
-                        <img src="../../images/Suncoast_Lightwater_extra_12.png" alt="">
-                        <p>Lightwater</p>
-                        <p>15 DKK</p>
-                    </div>
-
-                    <div class="suggested-item">
-                        <img src="../../images/chrome_2024-02-19_19-10-51.png" alt="">
-                        <p>Green Craft from the tap</p>
-                        <p>15 DKK</p>
-                    </div>
-
-                </div>
+                <section class="suggested-items">
+                </section>
             </div>
         </div>
         <div class="right-panel"></div>
@@ -129,7 +95,8 @@
     </main>
     <footer id="footer">
     </footer>
-
+    <script type="module" src="../scripts/setup.js"></script>
+    <script type="module" src="../scripts/single_product.js"></script>
 </body>
 
 </html>
