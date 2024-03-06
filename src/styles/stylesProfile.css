@@ -15,7 +15,9 @@ p {
 
 /* ------------------- HEADER ------------------- */
 
-
+#center-panel-profile {
+        background-color: rgb(241, 239, 239);
+}
 .profile-left-panel {
     background-color: white; 
     padding: 20px; 
