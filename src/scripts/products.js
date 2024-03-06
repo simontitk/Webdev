@@ -343,7 +343,7 @@ export function createProducts() {
             "size": 100.0,
             "quantity": 1,
             "categories": [
-                "mineral"
+                "mineral", "craft"
             ],
             "rating": 5,
             "price": 999.95,
