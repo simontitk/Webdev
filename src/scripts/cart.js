@@ -1,13 +1,24 @@
+// Checks to make sure document is loaded before executing any of
+//of the following Js
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
 
+// Global Variables
+
 function ready() {
-    // Prepares delte buttonsfor use 
+    // loads cart items
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    for (var i = 0; i < cart.length; i++) {
+        var product = cart[i];
+        addItemToCart(product.itemTitle, product.itemSize, product.itemPrice, product.itemImg)
+        updateCartTotal()
+    }
+    
+    // Prepares delete buttons for use 
     var removeCartItemButtons = document.getElementsByClassName('button-delete')
-    console.log(removeCartItemButtons)
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
@@ -18,18 +29,17 @@ function ready() {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
     }
-    // Prepare "add to cart" buttons for use
-    var addToCartButtons = document.getElementsByClassName('???')
-    for (var i = 0; i < addToCartButtons.length; i++) {
-        var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartClicked)
-    }
 }
 
 function removeCartItem(event) {
+    let cart = JSON.parse(localStorage.getItem("cart"))
     var buttonClicked = event.target
-            buttonClicked.parentElement.parentElement.remove()
-            updateCartTotal()
+    var rowToRemove = buttonClicked.parentElement.parentElement
+    var title = rowToRemove.getElementsByClassName('basket-item-title')[0].innerText
+    var temp = cart.filter(item => item.itemTitle != title)
+    localStorage.setItem("cart", JSON.stringify(temp))
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
 }
 
 function quantityChanged(event) {
@@ -40,42 +50,34 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
-function addToCartClicked(event) {
-    var button = event.target
-    var product = button.parentElement.parentElement
-    var title = product.getElementsByClassName('nameOfProductNameClass')[0].innterText
-    var price = product.getElementsByClassName('nameOfPriceClass')[0].innerText
-    var imageSrc = produt.getElementsByClassName('nameOfImageClass')[0].src
-    addItemToCart(title, price, imageSrc)
-    updateCartTotal()
-}
-
-function addItemToCart(title, price, imageSrc) {
+function addItemToCart(title, size, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('basket-item-row')
     var cartItemsContainer = document.getElementsByClassName('middle-cart-container')[0]
-    //checks if item is already is in cart and gives an alert and does not add the item if so
-    var cartItemNames = cartItems.getElementsByTagName('h2')
-    for (var i = 0; i < cartItemNames.length; i++) {
-        if (cartItemNames[i].innerText == title) {
-            alert('This item is already in the cart')
-            return
-        }
-    }
+    // //checks if item is already is in cart and gives an alert and does not add the item if so
+    // var cartItemNames = cartItemsContainer.getElementsByClassName('basket-item-title')
+    // for (var i = 0; i < cartItemNames.length; i++) {
+    //     if (cartItemNames[i].innerText == title) {
+    //         alert('This item is already in the cart')
+    //         return
+    //     }
+    // }
     // puts in html with values of newly added item
     var cartRowContents = `
+        <div class="basket-item-left-container">
             <img class="basket-item-image" src="${imageSrc}">
-            <div class="basket-item-name">
-                <h2>${title}</h2>
+            <div class="basket-item-name-container">
+                <span class="basket-item-title">${title}</span>
+                <span class="basket-item-size">${size}</span>
                 <div class="input-group quantity-selector">
                     <input type="number" id="inputQuantitySelector" class="form-control" 
-                        data-bs-step="counter" name="quantity" title="quantity" value="2" 
-                        min="0" max="99" step="1" data-bs-round="0">
+                        name="quantity" title="quantity" value="1" min="0" max="99" step="1">
                 </div>
             </div>
+        </div>
             <div class="basket-item-space"></div>
-            <div class="basket-item-price">
-                <h3>${price}</h3>
+            <div class="basket-item-price-container">
+                <span class="basket-item-price">${price}</span>
                 <button class="button-delete" role="button">delete</button>
             </div>`
         cartRow.innerHTML = cartRowContents
@@ -90,12 +92,12 @@ function updateCartTotal() {
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByTagName('h3')[0]
+        var priceElement = cartRow.getElementsByClassName('basket-item-price')[0]
         var quantityElement = cartRow.getElementsByClassName('form-control')[0]
-        var price = parseFloat(priceElement.innerText.replace('€', ''))
+        var price = parseFloat(priceElement.innerText.replace('DKK', ''))
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
     total = Math.round(total*100) / 100
-    document.getElementsByClassName('subtotal-price')[0].innerText = '€' + total
+    document.getElementsByClassName('subtotal-price')[0].innerText = total + ' DKK'
 }
