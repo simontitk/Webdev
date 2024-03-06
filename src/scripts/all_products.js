@@ -4,11 +4,11 @@ import {createProductCard} from "../scripts/product_card.js"
 
 // grabbing toggle buttons and the corresponding panels in the sidebar's filters
 
-const toggleButtons = document.querySelectorAll(".filter-header");
+const toggleHeaders = document.querySelectorAll(".filter-header");
 const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
 const toggleArrows = document.querySelectorAll(".toggle-button");
-for (let i = 0; i < toggleButtons.length; i++) {
-    toggleButtons[i].onclick = () => {
+for (let i = 0; i < toggleHeaders.length; i++) {
+    toggleHeaders[i].onclick = () => {
         collapsibleFilterInputs[i].classList.toggle("collapsed-filter-inputs");
         toggleArrows[i].classList.toggle("toggle-button-transformed");
     };
@@ -17,28 +17,7 @@ for (let i = 0; i < toggleButtons.length; i++) {
 
 // populating the product display and filtering it
 
-const attachProductPages = () => {
-    [...document.querySelectorAll(".product-display")].forEach(display => {
-        display.onclick =  () => {
-            localStorage.setItem("productId", display.id);
-            location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';  // change this to an anchor?
-        }
-    });
-}
-
-
 const PRODUCTS = createProducts();
-const productSection = document.querySelector(".product-section");
-
-const insertProductCards = (products) => {
-    productSection.innerHTML = products
-        .map(product => createProductCard(product))
-        .reduce((result, productHtml) => result + productHtml, "");
-}
-
-insertProductCards(PRODUCTS);
-attachProductPages();
-
 const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
 const minPriceInput = document.getElementById("min-price-input");
 const maxPriceInput = document.getElementById("max-price-input");
@@ -48,18 +27,23 @@ const minRatingInput = document.getElementById("min-rating-input");
 const maxRatingInput = document.getElementById("max-rating-input");  
 const filterButton = document.getElementById("filter-button");
 const resetFilterButton = document.getElementById("reset-filter-button");
+const productSection = document.querySelector(".product-section");
+const selectedCategory = localStorage.getItem("selectedCategory");
 
-filterButton.onclick = () => {
-    let filteredProducts = filterProducts(PRODUCTS);
-    insertProductCards(filteredProducts);
-    attachProductPages();
-};
-
-resetFilterButton.onclick = () => {
-    categoryCheckboxes.forEach(checkbox => checkbox.checked = true);
-    [...document.querySelectorAll(".filter-input")].forEach(input => input.value = "");
+const insertProductCards = (products) => {
+    productSection.innerHTML = products
+        .map(product => createProductCard(product))
+        .reduce((result, productHtml) => result + productHtml, "");
 }
 
+const attachProductPages = () => {
+    document.querySelectorAll(".product-display").forEach(display => {
+        display.onclick =  () => {
+            localStorage.setItem("productId", display.id);
+            location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
+        }
+    });
+}
 
 const filterProducts = (products) => {
     let minPrice = Number(minPriceInput.value);
@@ -79,5 +63,26 @@ const filterProducts = (products) => {
             (product.rating >= minRating) &&
             (product.categories.some(cat => selectedCategories.has(cat)))
         );
-    })
+    });
 }
+
+filterButton.onclick = () => {
+    let filteredProducts = filterProducts(PRODUCTS);
+    insertProductCards(filteredProducts);
+    attachProductPages();
+};
+
+resetFilterButton.onclick = () => {
+    categoryCheckboxes.forEach(checkbox => checkbox.checked = true);
+    [...document.querySelectorAll(".filter-input")].forEach(input => input.value = "");
+}
+
+if (selectedCategory) {
+    categoryCheckboxes.filter(cb => cb.value !== selectedCategory).forEach(cb => cb.checked = false);
+    localStorage.removeItem("selectedCategory");
+    insertProductCards(filterProducts(PRODUCTS));
+} else {
+    insertProductCards(PRODUCTS);
+}
+
+attachProductPages();

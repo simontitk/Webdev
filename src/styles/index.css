@@ -37,6 +37,7 @@
 
 .category-card {
     width: 16.7%;
+    max-height: 300px;
     transition: width .3s;
     display: flex;
     align-items: stretch;
@@ -44,6 +45,7 @@
     color: white;
     flex-direction: column;
     background-position: center center;
+    cursor: pointer;
 }
 
 .category-name {
