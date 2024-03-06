@@ -12,10 +12,10 @@ function ready() {
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
-}
-    if(!localStorage.getItem("cart")){
-            localStorage.setItem("cart", "[]")
-        }
+    }
+    if (!localStorage.getItem("cart")) {
+        localStorage.setItem("cart", "[]")
+    }
     localStorage.removeItem("debug");
 }
 
@@ -36,18 +36,18 @@ function addToCartClicked(event) {
 
 let cart = JSON.parse(localStorage.getItem("cart"))
 
-function addItemToCart(title, size, price, imageSrc) {
+export function addItemToCart(title, size, price, imageSrc) {
     let product = {
         itemTitle: title,
         itemSize: size,
         itemPrice: price,
         itemImg: imageSrc
     }
-    if(cart.length == 0) {
+    if (cart.length == 0) {
         cart.push(product);
-    }else{
+    } else {
         let res = cart.find(element => element.itemTitle == product.itemTitle);
-        if(res == undefined) {
+        if (res == undefined) {
             cart.push(product)
         }
     }

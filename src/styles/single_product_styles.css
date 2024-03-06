@@ -255,23 +255,6 @@
     padding: 10px;
 }
 
-.heart-button {
-    font-size: 40px;
-    background-color: white;
-    border: none;
-    background: linear-gradient(to right, rgb(255, 123, 123), rgb(255, 44, 44));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-right: 10px;
-}
-
-.heart-button:hover {
-    background: linear-gradient(to right, rgb(255, 100, 100), rgb(255, 34, 34));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 
 /* ---------- suggestion ----------- */
 

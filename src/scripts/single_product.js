@@ -1,5 +1,6 @@
 import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
+import { addItemToCart } from "../scripts/to_cart.js";
 
 const ALL_PRODUCTS = createProducts();
 
@@ -18,56 +19,22 @@ const insertProductCards = (selectedProducts) => {
     randomIndices.forEach(index => productSection.innerHTML += createProductCard(selectedProducts[index]))
 }
 
-
 insertProductCards(ALL_PRODUCTS);
 
-let intervalId;
-
-
-document.getElementById("minus-quantity").addEventListener("mousedown", function () {
-    const quantityElement = document.getElementById("quantity-input");
-    intervalId = setInterval(function () {
-        let quantity = quantityElement.value;
-        if (quantity > 1) {
-            quantity--;
-            quantityElement.value = quantity;
-        } else {
-            clearInterval(intervalId);
-        }
-    }, 200);
+const quantityElement = document.getElementById("quantity-input");
+document.getElementById("minus-quantity").addEventListener("click", function () {
+    let quantity = quantityElement.value;
+    if (quantity > 1) {
+        quantity--;
+        quantityElement.value = quantity;
+    }
 });
 
-document.getElementById("minus-quantity").addEventListener("mouseup", function () {
-    clearInterval(intervalId);
+document.getElementById("plus-quantity").addEventListener("click", function () {
+    let quantity = quantityElement.value;
+    quantity++;
+    quantityElement.value = quantity;
 });
-
-document.getElementById("minus-quantity").addEventListener("mouseleave", function () {
-    clearInterval(intervalId);
-});
-
-
-document.getElementById("plus-quantity").addEventListener("mousedown", function () {
-    const quantityElement = document.getElementById("quantity-input");
-    intervalId = setInterval(function () {
-        let quantity = quantityElement.value;
-        if (quantity < 999) {
-            quantity++;
-            quantityElement.value = quantity;
-        } else {
-            clearInterval(intervalId);
-        }
-    }, 200);
-});
-
-document.getElementById("plus-quantity").addEventListener("mouseup", function () {
-    clearInterval(intervalId);
-});
-
-document.getElementById("plus-quantity").addEventListener("mouseleave", function () {
-    clearInterval(intervalId);
-});
-
-
 
 let productID = localStorage.getItem("productId");
 productID = productID ? Number(productID) : 26;
@@ -88,13 +55,10 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
-const heartButton = document.querySelector(".heart-button");
-heartButton.addEventListener("click", function () {
-    if (this.textContent === "❤") {
-        this.textContent = "♡";
-        this.style.fontSize = "40px";
-    } else {
-        this.textContent = "❤";
-        this.style.fontSize = "30px";
+const cartButton = document.getElementById("cart-button");
+cartButton.addEventListener('click', function () {
+    let quantity = quantityElement.value;
+    for (let i = 0; i < quantity; i++) {
+        addItemToCart(product.name, product.size, product.price, product.picture);
     }
 });
