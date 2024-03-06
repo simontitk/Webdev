@@ -21,7 +21,8 @@ function ready() {
 
 function addToCartClicked(event) {
     var button = event.target
-    var product = button.parentElement.parentElement.parentElement
+    var product = button.parentElement.parentElement
+    console.log(product)
     var title = product.getElementsByClassName('product-name')[0].innerText
     console.log(title)
     var size = product.getElementsByClassName('product-size')[0].innerText
