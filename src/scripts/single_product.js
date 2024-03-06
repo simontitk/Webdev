@@ -40,9 +40,8 @@ let productID = localStorage.getItem("productId");
 productID = productID ? Number(productID) : 26;
 const product = ALL_PRODUCTS.find(p => p.id === productID);
 
-document.getElementById("name").textContent = product.name;
+document.getElementById("name").textContent = `${product.name} ${product.size} ml`;
 document.getElementById("price").textContent = `${product.price} DKK`;
-document.getElementById("size").textContent = `Volume: ${product.size} ml`;
 document.getElementById("description").textContent = product.description;
 document.getElementById("picture").src = `../../images/${product.picture}`;
 
@@ -54,7 +53,6 @@ for (let i = 1; i <= 5; i++) {
         ratingImg.src = "../../assets/icons/empty-droplet.png";
     }
 }
-
 
 
 if (!localStorage.getItem("cart")) {
