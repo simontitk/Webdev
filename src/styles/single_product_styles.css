@@ -113,7 +113,7 @@
 }
 
 
-.product-name {
+.single-product-name {
     font-size: 32px;
     margin-top: 5px;
     margin-bottom: 0px;
@@ -270,23 +270,6 @@
     padding: 10px;
     margin: 0;
 }
-
-.suggested-items img {
-    height: 256px;
-    max-width: 256px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.suggested-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
 
 
 @media only screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
-import { addItemToCart } from "../scripts/to_cart.js";
+// import { addItemToCart } from "../scripts/to_cart.js";
 
 const ALL_PRODUCTS = createProducts();
 
@@ -55,10 +55,34 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
-const cartButton = document.getElementById("cart-button");
-cartButton.addEventListener('click', function () {
+
+
+if (!localStorage.getItem("cart")) {
+    localStorage.setItem("cart", "[]");
+}
+
+const cart = JSON.parse(localStorage.getItem("cart"));
+
+
+document.getElementById("cart-button").addEventListener("click", function () {
+    let product = parseProduct();
     let quantity = quantityElement.value;
     for (let i = 0; i < quantity; i++) {
-        addItemToCart(product.name, product.size, product.price, product.picture);
+        if (!cart.some(item => item.itemTitle === product.itemTitle)) {
+            cart.push(product);
+        }
     }
+    quantityElement.value = 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product.itemTitle} added to cart!`);
 });
+
+function parseProduct() {
+    return {
+        "itemTitle": product.name,
+        "itemSize": product.size,
+        "itemPrice": product.price,
+        "itemImg": product.picture
+    };
+}
+
