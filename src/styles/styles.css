@@ -186,13 +186,12 @@ main {
         top: 70px;
         left: 0px;
         width: 230px;
-        transition: all .3s;
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
     }
 
     .hidden {
         width: 0px;
-        opacity: 0;
+        display: none;
     }
 
     .header-links {
@@ -225,7 +224,6 @@ main {
 
 }
     
-
 
 @media only screen and (max-width: 768px) {
 
