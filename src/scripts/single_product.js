@@ -2,6 +2,13 @@ import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
 // import { addItemToCart } from "../scripts/to_cart.js";
 
+
+/* 
+-------------------------------------------------
+currently the id and the quantity is stored in the local storage's cart item
+-------------------------------------------------
+ */
+
 const ALL_PRODUCTS = createProducts();
 
 const getRandomIndices = (length, count) => {
@@ -37,7 +44,8 @@ document.getElementById("plus-quantity").addEventListener("click", function () {
 });
 
 let productID = localStorage.getItem("productId");
-productID = productID ? Number(productID) : 26;
+
+productID = ((undefined === productID) ?  26 : Number(productID));
 const product = ALL_PRODUCTS.find(p => p.id === productID);
 
 document.getElementById("name").textContent = `${product.name} ${product.size} ml`;
@@ -54,28 +62,35 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
-
 if (!localStorage.getItem("cart")) {
     localStorage.setItem("cart", "[]");
 }
-
 const cart = JSON.parse(localStorage.getItem("cart"));
 
+const addToCartButton = document.querySelector(".cart-button");
+addToCartButton.id = productID;
+addToCartButton.addEventListener("click", function () {
+    let cartItem = {
+        "id": productID,
+        "quantity": quantityElement.value
+    }
 
-document.getElementById("cart-button").addEventListener("click", function () {
-    let product = parseProduct();
+/*     let product = parseProduct();
     let quantity = quantityElement.value;
     for (let i = 0; i < quantity; i++) {
-        if (!cart.some(item => item.itemTitle === product.itemTitle)) {
-            cart.push(product);
-        }
     }
-    quantityElement.value = 1;
+} 
+quantityElement.value = 1; */
+    if (!cart.some(item => item.id === product.id)) {
+        cart.push(cartItem);
+        alert(`${product.name} added to cart!`);
+    } else {
+        alert(`${product.name} already in cart!`)
+    }
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${product.itemTitle} added to cart!`);
 });
 
-function parseProduct() {
+/* function parseProduct() {
     return {
         "itemTitle": product.name,
         "itemSize": product.size,
@@ -83,4 +98,4 @@ function parseProduct() {
         "itemImg": product.picture
     };
 }
-
+ */
