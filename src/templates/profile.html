@@ -42,9 +42,9 @@
             <h3 a href="">Change Password</a></h3>
             <h3>Payment Method: <span id="paymentMethodInfo"></span></h3><p><button class="filter-collapse-button">X</button></p>
             <h2>User Information</h2>
-            <h3>Name: <span id="nameProfile"></span></h3>
+            <h3>Name:</h3> <p><span id="nameProfile"></span></p>
             <h3>Last name: </h3> <p><span id="sNameProfile"></span></p>
-            <h3>Home Address: </h3> <p><span id="homeAddress"></span></p>
+            <h3>Home Address: </h3> <p><span id="addressHome"></span></p>
             <!-- <h4>Zip Code: </h4> <p><span id="homeZipCode"></span></p>
             <h4>Country: </h4> <p><span id="homeAddressCountry"></span></p>
             <h3>Office Address: </h3> <p><span id="officeAddress"></span></p>
@@ -70,8 +70,10 @@
     <input type="text" id="phonenumber" name="phonenumber" value=""/><br />
 
     <label for="password">Password: </label> <br />
-    <input type="text" id="password" name="password" value=""/><br /><br />
+    <input type="text" id="password" name="password" value=""/><br />
 
+    <label for="addressHome">Address: </label> <br />
+    <input type="text" id="addressHome" name="addressHome" value="" /><br /><br />
 
     <input type="submit" onclick="resetLocalStorage();store()" value="Submit" />
     </form>
@@ -84,6 +86,5 @@
     <script type="module" src="../scripts/all_products.js"></script>
     <script src="../scripts/to_cart.js"></script>
     <script src="../scripts/userinfo.js"></script>
-    </script>
 </body>
 </html>
