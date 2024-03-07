@@ -35,16 +35,17 @@
         <div class="center-panel" id="center-panel-profile">
             <h1 id="Privacy">Privacy</h1>
             <h2>Account Information</h2>
-            <h3>Username: </h3> <p><span id="username"></span></p>
-            <h3>Email Address: </h3> <p><span id="emailProfile"></span></p>
-            <h3>Phone Number: </h3> <p><span id="phoneNumberProfile"></span></p>
-            <h3>Password: </h3> <p><span id="passwordProfile"></span></p>
-            <h3 a href="">Change Password</a></h3>
+            <h3>Username: </h3> <p><span id="username-display"></span></p>
+            <h3>Email Address: </h3> <p><span id="email-display"></span></p>
+            <h3>Phone Number: </h3> <p><span id="phonenumber-display"></span></p>
+            <h3>Password: </h3> <p><span id="password-display"></span></p>
+            <h3><a href="">Change Password</a></h3>
             <h3>Payment Method: <span id="paymentMethodInfo"></span></h3><p><button class="filter-collapse-button">X</button></p>
             <h2>User Information</h2>
-            <h3>Name:</h3> <p><span id="nameProfile"></span></p>
-            <h3>Last name: </h3> <p><span id="sNameProfile"></span></p>
-            <h3>Home Address: </h3> <p><span id="addressHome"></span></p>
+            <h3>First name:</h3> <p><span id="firstname-display"></span></p>
+            <h3>Last name: </h3> <p><span id="lastname-display"></span></p>
+            <h3>City: </h3> <p><span id="city-display"></span></p>
+            <h3>Home Address: </h3> <p><span id="address-display"></span></p>
             <!-- <h4>Zip Code: </h4> <p><span id="homeZipCode"></span></p>
             <h4>Country: </h4> <p><span id="homeAddressCountry"></span></p>
             <h3>Office Address: </h3> <p><span id="officeAddress"></span></p>
@@ -54,37 +55,40 @@
         </div>
         <div class="right-panel" id="right-panel-profile">
             <form action="profile.html">
-    <label for="fname">First name:</label><br />
-    <input type="text" id="fname" name="fname" value="" /><br />
+                <label for="fname">First name:</label><br />
+                <input type="text" id="firstName" name="fname" value="" /><br />
 
-    <label for="lname">Sirname:</label><br />
-    <input type="text" id="lname" name="lname" value="" /><br />
+                <label for="lname">Sirname:</label><br />
+                <input type="text" id="lastName" name="lname" value="" /><br />
 
-    <label for="username">Username:</label> <br />
-    <input type="text" id="usernameProfile" user="usernameProfile" value="" /><br />
+                <label for="username">Username:</label> <br />
+                <input type="text" id="userName" user="usernameProfile" value="" /><br />
 
-    <label for="email">Email:</label> <br />
-    <input type="text" id="email" name="email" value="" /><br />
+                <label for="email">Email:</label> <br />
+                <input type="text" id="email" name="email" value="" /><br />
 
-    <label for="phonenumber">Phone Number:</label> <br />
-    <input type="text" id="phonenumber" name="phonenumber" value=""/><br />
+                <label for="phonenumber">Phone Number:</label> <br />
+                <input type="text" id="phoneNumber" name="phonenumber" value=""/><br />
 
-    <label for="password">Password: </label> <br />
-    <input type="text" id="password" name="password" value=""/><br />
+                <label for="password">Password: </label> <br />
+                <input type="text" id="password" name="password" value=""/><br />
 
-    <label for="addressHome">Address: </label> <br />
-    <input type="text" id="addressHome" name="addressHome" value="" /><br /><br />
+                <label for="addressHome">Address: </label> <br />
+                <input type="text" id="address" name="addressHome" value="" /><br /><br />
 
-    <input type="submit" onclick="resetLocalStorage();store()" value="Submit" />
-    </form>
+                <label for="city">City: </label> <br />
+                <input type="text" id="city" name="ciy" value="" /><br /><br />
+
+                <input type="submit" value="Submit" id="submit-user-info-changes" />
+            </form>
         </div>
 
     </main>
     <footer id="footer">
     </footer>
     <script type="module" src="../scripts/setup.js"></script>
-    <script type="module" src="../scripts/all_products.js"></script>
-    <script src="../scripts/to_cart.js"></script>
-    <script src="../scripts/userinfo.js"></script>
+
+    <script type="module" src="../scripts/to_cart.js"></script>
+    <script type="module" src="../scripts/userinfo.js"></script>
 </body>
 </html>

@@ -37,7 +37,7 @@
     <main>
       <div class="left-panel"></div>
       <div class="center-panel">
-        <form action="index.html" onsubmit="store();login()">
+        <form id="registration-form">
           <h1>Welcome!</h1>
           <h2>Fill out your information below</h2>
 
@@ -47,7 +47,7 @@
             </div>
             <input
               type="text"
-              id="fname"
+              id="firstName"
               placeholder="Enter first name"
               name="fname"
               required
@@ -60,7 +60,7 @@
             </div>
             <input
               type="text"
-              id="lname"
+              id="lastName"
               placeholder="Enter last name"
               name="lname"
 
@@ -73,7 +73,7 @@
             </div>
             <input
               type="text"
-              id="addressHome"
+              id="address"
               placeholder="Enter address"
               name="addressHome"
               
@@ -88,7 +88,8 @@
               type="text"
               placeholder="Enter city"
               name="city"
-              
+              id="city"
+
             />
           </div>
           <div class="form-element">
@@ -97,7 +98,7 @@
             </div>
               <input 
               type="text" 
-              id="username" 
+              id="userName" 
               placeholder="Enter Username" 
               name="username" />
               
@@ -116,11 +117,24 @@
           </div>
           <div class = "form-element">
             <div>
+                <label for="phonenumber"><b>Email adress</b></label>
+            </div>
+            <input
+              type="text"
+              id="phoneNumber"
+              placeholder="Enter phone number"
+              name="phonenumber"
+              
+            />
+          </div>
+          <div class = "form-element">
+            <div>
                 <label for="psw"><b>Password</b></label>  
             </div>
             
             <input
               type="password"
+              id="password"
               placeholder="Enter password"
               name="psw"
               
@@ -158,25 +172,6 @@
         </div>
     </footer>
 
-    <script>
-        // Check if the user is logged in
-        const isLoggedIn = false; // Change this based on your authentication logic
-      
-        // Get the profile link element
-        const profileLink = document.getElementById('profileLink');
-      
-        // Set the appropriate href based on the user's authentication status
-        if (isLoggedIn) {
-          profileLink.href = './profile.html'; // Redirect to logged-in profile page
-        } else {
-          profileLink.href = './login.html'; // Redirect to login page if not logged in
-        }
-
-        function login() {
-            isLoggedIn = true;
-        }
-
-      </script>
-      <script src="../scripts/userinfo.js"></script>
-  </body>
+    <script type="module" src="../scripts/register.js"></script>
+    </body>
 </html>
