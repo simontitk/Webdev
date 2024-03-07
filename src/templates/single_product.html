@@ -24,7 +24,9 @@
         <div class="center-panel">
             <div class="product">
                 <div class="pictures-rating">
-                    <img alt="product picture" class="product-picture" id="picture">
+                    <div class="product-img-container">
+                        <img alt="product picture" class="product-image" id="picture">
+                    </div>
                     <div class="rating">
                         <p>Rating</p>
                         <div class="droplets">
@@ -42,17 +44,11 @@
                         <p class="pricetag" id="price"></p>
                         <p class="vat">incl. VAT</p>
                     </div>
-
-                    <p class="product-description" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing
+                    <p class="product-description hide-text" id="description">Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipiscing
                         elit, sed do
                         eiusmod
-                        tempor incididunt ut labore et dolore aliqua...<button class="more-button">more</button></p>
-
-                    <div class="product-size">
-                        <p class="volume" id="size">Volume: </p>
-                        <!-- <button class="volume-modifier-button">250 ml ▼</button> -->
-                    </div>
-
                 </div>
 
                 <div class="purchase-details">
@@ -64,7 +60,7 @@
                         </p>
                     </div>
                     <div class="quantity">
-                        <p>Quantity</p>
+                        <p class=>Quantity</p>
                         <div class="quantity-modifier">
                             <button id="plus-quantity">+</button>
                             <input id="quantity-input" type="number" min="1" max="999" value="1">
