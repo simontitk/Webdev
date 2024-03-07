@@ -4,12 +4,30 @@ p {
     max-width: 800px;
 }
 
+p.notH3 {
+    font-weight: bold;
+}
+
+p.infoDisplay {
+    padding-left: 5%;
+    font-style: italic;
+}
+
 .Profile-index ul{
     list-style-type: none;
 }
 
 .Profile-subindex li {
     list-style-type: none;
+}
+
+label.checkbox {
+        display: inline-block;
+    
+}
+
+#password-display {
+    visibility: hidden;
 }
 
 
@@ -19,17 +37,8 @@ p {
         background-color: rgb(241, 239, 239);
 }
 .profile-left-panel {
-    background-color: white; 
-    padding: 20px; 
-    flex: 1;
-    align-items: center;
+    padding-right: 1%;
 }
-
-/* .right-panel {
-    /*padding: 20px;*/
-    /*max-width: 200px;  extra added*/
-    /*flex: 1;* 
-*/
 
 
 /* ------------------- FOOTER ------------------- */
