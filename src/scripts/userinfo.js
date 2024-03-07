@@ -1,18 +1,5 @@
 import { storeUserInfo } from "./store_user_info.js";
-
-
-export function getUserInfo() {
-    return {
-        userName: localStorage.getItem("userName"),
-        firstName: localStorage.getItem("firstName"),
-        lastName: localStorage.getItem("lastName"),
-        email: localStorage.getItem("email"),
-        phoneNumber: localStorage.getItem("phoneNumber"),
-        password: localStorage.getItem("password"),
-        address: localStorage.getItem("address"),
-        city: localStorage.getItem("city")
-    }
-}
+import { getUserInfo } from "./store_user_info.js";
 
 
 function displayAccountInfo(user) {

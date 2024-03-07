@@ -1,6 +1,5 @@
 
 export function storeUserInfo() {
-    console.log("SHIT")
     let inputFname = document.getElementById("firstName").value;
     let inputLname = document.getElementById("lastName").value;
     let inputUsername = document.getElementById("userName").value;
@@ -18,4 +17,17 @@ export function storeUserInfo() {
     localStorage.setItem("password", inputPassword);
     localStorage.setItem("address", inputAddressHome);
     localStorage.setItem("city", inputCity);
+}
+
+export function getUserInfo() {
+    return {
+        userName: localStorage.getItem("userName"),
+        firstName: localStorage.getItem("firstName"),
+        lastName: localStorage.getItem("lastName"),
+        email: localStorage.getItem("email"),
+        phoneNumber: localStorage.getItem("phoneNumber"),
+        password: localStorage.getItem("password"),
+        address: localStorage.getItem("address"),
+        city: localStorage.getItem("city")
+    }
 }
