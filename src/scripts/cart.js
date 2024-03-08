@@ -39,8 +39,10 @@ function ready() {
         input.addEventListener('change', quantityChanged)
     }
 
+}
 
 function removeCartItem(event) {
+    const cart = createCart()
     var buttonClicked = event.target
     var rowToRemove = buttonClicked.parentElement.parentElement
     var id = rowToRemove.getElementsByClassName('basket-item-left-container')[0].id
@@ -99,5 +101,4 @@ function updateCartTotal() {
     }
     total = Math.round(total*100) / 100
     document.getElementsByClassName('subtotal-price')[0].innerText = total + ' DKK'
-}
 }
