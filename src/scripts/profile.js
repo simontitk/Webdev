@@ -1,6 +1,17 @@
 import { storeUserInfo } from "./store_user_info.js";
 import { getUserInfo } from "./store_user_info.js";
 
+function unhidePassword() {
+    // Get references to the checkbox and the span
+    const toggleCheckbox = document.getElementById('toggleCheckbox');
+    const hiddenSpan = document.getElementById('password-display');
+
+    // Add an event listener to the checkbox to toggle the visibility of the span
+    toggleCheckbox.addEventListener('change', function() {
+        hiddenSpan.style.visibility = toggleCheckbox.checked ? 'visible' : 'hidden';
+    });
+}
+
 
 function displayAccountInfo(user) {
     document.getElementById('usernameHeading-profile').innerText = user["userName"] || "";
@@ -22,4 +33,5 @@ submitbutton.onclick = () => {
 document.addEventListener('DOMContentLoaded', () => {
     const user = getUserInfo();
     displayAccountInfo(user);
+    unhidePassword();
 })
