@@ -1,14 +1,7 @@
 import {isLoggedIn} from './loggedIn.js'
 
 export function createHeader() {
-    let profileLink = ''; // Initialize profile link variable
-    
-    // Set the appropriate href based on the user's authentication status
-    if (isLoggedIn) {
-      profileLink = './profile.html'; // Redirect to profile page
-    } else {
-      profileLink = './login.html'; // Redirect to login page if not logged in
-    }
+    let profileLink = isLoggedIn()? './profile.html' : './login.html';
 
     return (
         `<div class="header-container">

@@ -1,6 +1,15 @@
-console.log("Page loaded");
+export function isLoggedIn() {
+    if (!localStorage.getItem("isLoggedIn")){
+        localStorage.setItem("isLoggedIn", "false")
+    }
 
-// Check if the user is logged in
-const isLoggedIn = false; 
+    return JSON.parse(localStorage.getItem("isLoggedIn"));
+}
 
-export {isLoggedIn};
+export function setLoggedIn() {
+    localStorage.setItem("isLoggedIn", "true")
+}
+
+export function setLoggedOut() {
+    localStorage.setItem("isLoggedIn", "false")
+}
