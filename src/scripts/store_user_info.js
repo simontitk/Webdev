@@ -9,14 +9,15 @@ export function storeUserInfo() {
     let inputAddressHome = document.getElementById("address").value;
     let inputCity = document.getElementById("city").value;
 
-    if (inputFname !== "")localStorage.setItem("firstName", inputFname);
-    if (inputFname !== "")localStorage.setItem("lastName", inputLname);
-    if (inputFname !== "")localStorage.setItem("userName", inputUsername);
-    if (inputFname !== "")localStorage.setItem("email", inputEmail);
-    if (inputFname !== "")localStorage.setItem("phoneNumber", inputNumber);
-    if (inputFname !== "")localStorage.setItem("password", inputPassword);
-    if (inputFname !== "")localStorage.setItem("address", inputAddressHome);
-    if (inputFname !== "")localStorage.setItem("city", inputCity);
+    if (inputFname) localStorage.setItem("firstName", inputFname);
+    if (inputLname) localStorage.setItem("lastName", inputLname);
+    if (inputUsername) localStorage.setItem("userName", inputUsername);
+    if (inputEmail) localStorage.setItem("email", inputEmail);
+    if (inputNumber) localStorage.setItem("phoneNumber", inputNumber);
+    if (inputPassword) localStorage.setItem("password", inputPassword);
+    if (inputAddressHome) localStorage.setItem("address", inputAddressHome);
+    if (inputCity) localStorage.setItem("city", inputCity);
+    localStorage.setItem("paymentMethod", "Select Payment Method");
 }
 
 export function getUserInfo() {

@@ -25,6 +25,19 @@ function displayAccountInfo(user) {
     document.getElementById('city-display').innerText = user["city"];
 }
 
+const paymentMethods = {
+    "optionText": 0,
+    "creditCard": 1,
+    "paypal": 2,
+    "mobilepay": 3
+}
+
+const paymentMethodSelection = document.getElementById("PaymentMethods");
+paymentMethodSelection.selectedIndex = paymentMethods[localStorage.getItem("paymentMethod")];
+paymentMethodSelection.onchange = () => {
+    localStorage.setItem("paymentMethod", paymentMethodSelection.value);
+}
+
 const submitbutton = document.getElementById("submit-user-info-changes");
 submitbutton.onclick = () => {
     storeUserInfo();
