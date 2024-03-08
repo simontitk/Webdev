@@ -1,38 +1,27 @@
 import {createProducts} from "../scripts/products.js"
 import {createProductCard} from "../scripts/product_card.js"
+import { attachAddToCartButtons } from "./add_to_cart.js";
+import { createCart } from "./add_to_cart.js";
 
 
 // grabbing toggle buttons and the corresponding panels in the sidebar's filters
 
-const toggleButtons = document.querySelectorAll(".filter-header");
+const toggleHeaders = document.querySelectorAll(".filter-header");
 const collapsibleFilterInputs = document.querySelectorAll(".collapsible-filter-inputs");
-for (let i=0; i<toggleButtons.length; i++) {
-    toggleButtons[i].onclick = () => {
+const toggleArrows = document.querySelectorAll(".toggle-button");
+for (let i = 0; i < toggleHeaders.length; i++) {
+    toggleHeaders[i].onclick = () => {
         collapsibleFilterInputs[i].classList.toggle("collapsed-filter-inputs");
+        toggleArrows[i].classList.toggle("toggle-button-transformed");
     };
 }
 
 
 // populating the product display and filtering it
 
+const CART = createCart()
+
 const PRODUCTS = createProducts();
-const productSection = document.querySelector(".product-section");
-
-const insertProductCards = (products) => {
-    productSection.innerHTML = products
-        .map(product => createProductCard(product))
-        .reduce((result, productHtml) => result + productHtml, "");
-}
-
-insertProductCards(PRODUCTS);
-
-[...document.querySelectorAll(".product-display")].forEach(display => {
-    display.onclick =  () => {
-        localStorage.setItem("productId", display.id);
-        location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
-    }
-});
-
 const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
 const minPriceInput = document.getElementById("min-price-input");
 const maxPriceInput = document.getElementById("max-price-input");
@@ -42,15 +31,22 @@ const minRatingInput = document.getElementById("min-rating-input");
 const maxRatingInput = document.getElementById("max-rating-input");  
 const filterButton = document.getElementById("filter-button");
 const resetFilterButton = document.getElementById("reset-filter-button");
+const productSection = document.querySelector(".product-section");
+const selectedCategory = localStorage.getItem("selectedCategory");
 
-filterButton.onclick = () => {
-    let filteredProducts = filterProducts(PRODUCTS);
-    insertProductCards(filteredProducts);
-};
+const insertProductCards = (products) => {
+    productSection.innerHTML = products
+        .map(product => createProductCard(product))
+        .reduce((result, productHtml) => result + productHtml, "");
+}
 
-resetFilterButton.onclick = () => {
-    categoryCheckboxes.forEach(checkbox => checkbox.checked = true);
-    [...document.querySelectorAll(".filter-input")].forEach(input => input.value = "");
+const attachProductPages = () => {
+    document.querySelectorAll(".product-display").forEach(display => {
+        display.onclick =  () => {
+            localStorage.setItem("productId", display.id);
+            location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
+        }
+    });
 }
 
 const filterProducts = (products) => {
@@ -71,5 +67,28 @@ const filterProducts = (products) => {
             (product.rating >= minRating) &&
             (product.categories.some(cat => selectedCategories.has(cat)))
         );
-    })
+    });
 }
+
+filterButton.onclick = () => {
+    let filteredProducts = filterProducts(PRODUCTS);
+    insertProductCards(filteredProducts);
+    attachProductPages();
+    attachAddToCartButtons(CART)
+};
+
+resetFilterButton.onclick = () => {
+    categoryCheckboxes.forEach(checkbox => checkbox.checked = true);
+    [...document.querySelectorAll(".filter-input")].forEach(input => input.value = "");
+}
+
+if (selectedCategory) {
+    categoryCheckboxes.filter(cb => cb.value !== selectedCategory).forEach(cb => cb.checked = false);
+    localStorage.removeItem("selectedCategory");
+    insertProductCards(filterProducts(PRODUCTS));
+} else {
+    insertProductCards(PRODUCTS);
+}
+
+attachProductPages();
+attachAddToCartButtons(CART)

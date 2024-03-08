@@ -1,0 +1,183 @@
+.frontpage-section {
+    background-color:  rgb(241, 239, 239);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.frontpage-section-header {
+    margin: 0px;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+
+
+/*------------CAMPAIGN------------*/
+
+.campaign {
+    height: 150px;
+    background-color: aqua;
+    text-align: center;
+    font-size: 100px;
+}
+
+
+/*------------CATEGORIES------------*/
+
+.category-display {
+    min-height: 300px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.category-card {
+    width: 16.7%;
+    max-height: 300px;
+    transition: width .3s;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    color: white;
+    flex-direction: column;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.category-name {
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+    transition: font-size .3s;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.category-description {
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.6s;
+    font-size: 18px;
+    padding-inline: 20%;
+    transition-delay: 0.3s;
+}
+
+.category-card:hover > .category-name {
+    font-size: 30px;
+}
+
+.category-card:hover > .category-description {
+    height: auto;
+    transition-delay: 0.3s;
+}
+
+.category-card-carbonated {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("../../assets/backgrounds/carbonated.jpg");
+    background-position: center center;
+}
+
+.category-card-carbonated:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../assets/backgrounds/carbonated.jpg") ;
+    background-position: center center;
+}
+    
+.category-card-still {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("../../assets/backgrounds/still2.webp");
+    background-position: center center;
+}
+
+.category-card-still:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../assets/backgrounds/still2.webp") ;
+    background-position: center center;
+}
+    
+.category-card-mineral {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("../../assets/backgrounds/mineral.png");
+    background-position: center center;
+}
+
+.category-card-mineral:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../assets/backgrounds/mineral.png") ;
+    background-position: center center;
+}
+    
+.category-card-flavoured {
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("../../assets/backgrounds/flavoured.png");
+   background-position: center center;
+}
+
+.category-card-flavoured:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../assets/backgrounds/flavoured.png") ;
+    background-position: center center;
+}
+
+.category-card-electrolyte {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("../../assets/backgrounds/electrolyte.webp");
+    background-position: center center;
+}
+
+.category-card-electrolyte:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../assets/backgrounds/electrolyte.webp");
+    background-position: center center;
+}
+    
+.category-card-craftwater {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url("../../assets/backgrounds/craft.jpg");
+    background-position: center center;
+}
+
+.category-card-craftwater:hover {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../../assets/backgrounds/craft.jpg");
+    background-position: center center;
+}
+
+
+/*------------OFFERS------------*/
+
+
+.offer-display {
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .category-display {
+        flex-direction: column;
+    }
+
+    .category-card {
+        width: 100%;
+    }
+
+    .offer-display {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        display: none;
+    }
+ }

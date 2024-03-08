@@ -5,8 +5,9 @@ export function createHeader() {
 
     return (
         `<div class="header-container">
-            <div class="header-logo"><a href="">HydroHomies</a></div>
-            <div class="header-lists">
+            <button id="header-hamburger">&#9776;</button>
+            <div class="header-logo"><a href="./index.html">HydroHomies</a></div>
+            <div class="header-lists" id="header-navlinks">
                 <ul class="header-links">
                     <li><a href="./all_products.html">Products</a></li>
                     <li><a href="#footer">Contact</a></li>

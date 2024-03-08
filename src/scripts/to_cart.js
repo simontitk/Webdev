@@ -1,56 +1,39 @@
-// Checks to make sure document is loaded before executing any of
-//of the following Js
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
+// Checks to make sure document is loaded before executing any of the following Js
+
+document.addEventListener("DOMContentLoaded", ready);
 
 // Prepare "add to cart" buttons for use
+
 function ready() {
-    var addToCartButtons = document.getElementsByClassName('add-to-cart-button')
-    for (var i = 0; i < addToCartButtons.length; i++) {
-        var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartClicked)
-}
-    if(!localStorage.getItem("cart")){
-            localStorage.setItem("cart", "[]")
-        }
-    localStorage.removeItem("debug");
-}
 
-function addToCartClicked(event) {
-    var button = event.target
-    var product = button.parentElement.parentElement
-    console.log(product)
-    var title = product.getElementsByClassName('product-name')[0].innerText
-    console.log(title)
-    var size = product.getElementsByClassName('product-size')[0].innerText
-    console.log(size)
-    var price = product.getElementsByClassName('product-price')[0].innerText
-    console.log(price)
-    var imageSrc = product.getElementsByClassName('product-image')[0].src
-    console.log(imageSrc)
-    addItemToCart(title, size, price, imageSrc,)
-}
-
-let cart = JSON.parse(localStorage.getItem("cart"))
-
-function addItemToCart(title, size, price, imageSrc) {
-    let product = {
-        itemTitle: title,
-        itemSize: size,
-        itemPrice: price,
-        itemImg: imageSrc
-    }
-    if(cart.length == 0) {
-        cart.push(product);
-    }else{
-        let res = cart.find(element => element.itemTitle == product.itemTitle);
-        if(res == undefined) {
-            cart.push(product)
-        }
+    if (!localStorage.getItem("cart")) {
+        localStorage.setItem("cart", "[]");
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart))
+    const cart = JSON.parse(localStorage.getItem("cart"));
+    document.querySelectorAll(".add-to-cart-button").forEach(
+        button => button.onclick = (event) => addToCartClicked(event.target)
+    );
+
+    function addToCartClicked(toCartButton) {
+        //let productCard = toCartButton.parentElement.parentElement;
+        // let product = parseProductCard(productCard);
+        //     if (!cart.some(item => item.itemTitle === product.itemTitle)) {
+        //     cart.push(product);
+        // }
+        
+    
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${product.itemTitle} added to cart!`);
+    }
+
+/*     function parseProductCard(productCard) {
+        return {
+            "itemTitle": productCard.querySelector(".product-name").innerText,
+            "itemSize": productCard.querySelector(".product-size").innerText,
+            "itemPrice": productCard.querySelector(".product-price").innerText,
+            "itemImg": productCard.querySelector(".product-image").src
+        };
+    } */
+    
 }
