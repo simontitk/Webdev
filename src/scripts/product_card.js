@@ -22,7 +22,7 @@ export function createProductCard(product) {
             </div>
             <div class="product-purchase-container">
                 <span class="product-price">${product.price} DKK</span>
-                <button class="add-to-cart-button">
+                <button class="add-to-cart-button" id="${product.id}">
                     Add to cart
                 </button>
             </div>
