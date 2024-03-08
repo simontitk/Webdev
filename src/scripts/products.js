@@ -219,7 +219,7 @@ export function createProducts() {
             ],
             "rating": 5,
             "price": 19.95,
-            "id": 15
+            "id": 14
         },
         {
             "picture": "Harmless_Harvest_Coconutwater_036.png",
@@ -234,7 +234,7 @@ export function createProducts() {
             ],
             "rating": 3,
             "price": 9.95,
-            "id": 16
+            "id": 15
         },
         {
             "picture": "Essentia_Ionizedwater_extra_1.png",
@@ -248,7 +248,7 @@ export function createProducts() {
             ],
             "rating": 1,
             "price": 19.95,
-            "id": 18
+            "id": 16
         },
         {
             "picture": "Essentia_Ionizedwater_extra_2.png",
@@ -262,7 +262,7 @@ export function createProducts() {
             ],
             "rating": 5,
             "price": 14.95,
-            "id": 19
+            "id": 17
         },
         {
             "picture": "Suncoast_Lightwater_extra_12x6.png",
@@ -276,7 +276,7 @@ export function createProducts() {
             ],
             "rating": 4,
             "price": 14.95,
-            "id": 20
+            "id": 18
         },
         {
             "picture": "Suncoast_Lightwater_extra_12.png",
@@ -290,7 +290,7 @@ export function createProducts() {
             ],
             "rating": 2,
             "price": 9.95,
-            "id": 22
+            "id": 19
         },
         {
             "picture": "Cocacola_SmartWater_ekstra_1.png",
@@ -304,7 +304,7 @@ export function createProducts() {
             ],
             "rating": 1,
             "price": 14.95,
-            "id": 23
+            "id": 20
         },
         {
             "picture": "Denice_mineralwater_05.png",
@@ -318,7 +318,7 @@ export function createProducts() {
             ],
             "rating": 2,
             "price": 14.95,
-            "id": 24
+            "id": 21
         },
         {
             "picture": "Denice_mineralwater_2.png",
@@ -332,7 +332,7 @@ export function createProducts() {
             ],
             "rating": 3,
             "price": 19.95,
-            "id": 25
+            "id": 22
         },
 
         {
@@ -347,7 +347,7 @@ export function createProducts() {
             ],
             "rating": 5,
             "price": 999.95,
-            "id": 26
+            "id": 23
         }
 
     ]);
