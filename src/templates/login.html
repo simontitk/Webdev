@@ -9,28 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
     <link rel="icon" href="../../assets/icons/empty-droplet.png" type="image/x-icon">
     <title>HydroHomies | Login</title>
   </head>
   <body>
-    <header id = header>
+    <header id="header">
     </header>
-
     <main>
       <div class="left-panel"></div>
       <div class="center-panel">
-        <form action="index.html" onsubmit="login()">
+        <form id = "loginForm">
           <h1>Welcome back!</h1>
           <h2>Log in to your account</h2>
-
           <div class = "form-element">
             <div>
                 <label for="email"><b>Email adress</b></label>
             </div>
             <input
-              type="text"
+              id = "email"
+              type="email"
               placeholder="Enter email address"
               name="email"
               required
@@ -40,20 +38,21 @@
             <div>
                 <label for="psw"><b>Password</b></label>  
             </div>
-            
             <input
+              id="password"
               type="password"
               placeholder="Enter password"
               name="psw"
               required
             />
           </div>
-          <button type="submit" class="button">Login</button>
+          <button id = "loginButton" type="submit" class="button">Login</button>
         </form>
+        <div id="messageBox"></div>
         <div>
           <h2>Are you new here?</h2>
           <a href="register.html">
-            <button type="create-account" class="button">Create Account</button>
+            <button type="button" class="button">Create Account</button>
           </a>
         </div>
       </div>
@@ -61,28 +60,7 @@
     </main>
     <footer id="footer">
     </footer>
-
-    <script>
-        // Check if the user is logged in
-        const isLoggedIn = false; // Change this based on your authentication logic
-      
-        // Get the profile link element
-        const profileLink = document.getElementById('profileLink');
-      
-        // Set the appropriate href based on the user's authentication status
-        if (isLoggedIn) {
-          profileLink.href = './profile.html'; // Redirect to logged-in profile page
-        } else {
-          profileLink.href = './login.html'; // Redirect to login page if not logged in
-        }
-
-        function login() {
-            isLoggedIn = true;
-        }
-
-      </script>
-      <script type="module" src="../scripts/setup.js"></script>
-
-
+    <script type="module" src="../scripts/setup.js" defer></script>
+    <script type="module" src="../scripts/login.js" defer></script>
   </body>
 </html>

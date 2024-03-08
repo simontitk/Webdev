@@ -36,3 +36,13 @@ input {
     box-sizing: border-box; /* Include padding and border in the width calculation */
     margin-bottom: 5px;
   }
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
