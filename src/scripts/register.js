@@ -1,9 +1,12 @@
 import {storeUserInfo} from "../scripts/store_user_info.js";
+import { setLoggedIn } from "./loggedIn.js";
 
 const form = document.getElementById("registration-form");
 form.onsubmit = (e) => {
     e.preventDefault();
     storeUserInfo();
+    setLoggedIn();
+    location.href = 'http://127.0.0.1:5500/src/templates/index.html';
 }
 
 

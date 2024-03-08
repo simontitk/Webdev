@@ -1,5 +1,6 @@
-import {createProducts} from "../scripts/products.js"
-import {createProductCard} from "../scripts/product_card.js"
+import { createProducts } from "../scripts/products.js"
+import { createProductCard } from "../scripts/product_card.js"
+import { attachProductPages } from "../scripts/product_card.js";
 import { attachAddToCartButtons } from "./add_to_cart.js";
 import { createCart } from "./add_to_cart.js";
 
@@ -19,8 +20,7 @@ for (let i = 0; i < toggleHeaders.length; i++) {
 
 // populating the product display and filtering it
 
-const CART = createCart()
-
+const CART = createCart();
 const PRODUCTS = createProducts();
 const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
 const minPriceInput = document.getElementById("min-price-input");
@@ -40,14 +40,6 @@ const insertProductCards = (products) => {
         .reduce((result, productHtml) => result + productHtml, "");
 }
 
-const attachProductPages = () => {
-    document.querySelectorAll(".product-display").forEach(display => {
-        display.onclick =  () => {
-            localStorage.setItem("productId", display.id);
-            location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
-        }
-    });
-}
 
 const filterProducts = (products) => {
     let minPrice = Number(minPriceInput.value);
