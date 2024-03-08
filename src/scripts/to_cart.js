@@ -16,23 +16,24 @@ function ready() {
     );
 
     function addToCartClicked(toCartButton) {
-        let productCard = toCartButton.parentElement.parentElement;
-        let product = parseProductCard(productCard);
-            if (!cart.some(item => item.itemTitle === product.itemTitle)) {
-            cart.push(product);
-        }
+        //let productCard = toCartButton.parentElement.parentElement;
+        // let product = parseProductCard(productCard);
+        //     if (!cart.some(item => item.itemTitle === product.itemTitle)) {
+        //     cart.push(product);
+        // }
+        
     
         localStorage.setItem("cart", JSON.stringify(cart));
         alert(`${product.itemTitle} added to cart!`);
     }
 
-    function parseProductCard(productCard) {
+/*     function parseProductCard(productCard) {
         return {
             "itemTitle": productCard.querySelector(".product-name").innerText,
             "itemSize": productCard.querySelector(".product-size").innerText,
             "itemPrice": productCard.querySelector(".product-price").innerText,
             "itemImg": productCard.querySelector(".product-image").src
         };
-    }
+    } */
     
 }

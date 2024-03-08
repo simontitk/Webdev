@@ -1,5 +1,7 @@
 import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
+import { attachAddToCartButtons } from "./add_to_cart.js";
+import { createCart } from "./add_to_cart.js";
 // import { addItemToCart } from "../scripts/to_cart.js";
 
 
@@ -47,6 +49,8 @@ let productID = localStorage.getItem("productId");
 
 productID = ((undefined === productID) ?  26 : Number(productID));
 const product = ALL_PRODUCTS.find(p => p.id === productID);
+console.log(product)
+
 
 document.getElementById("name").textContent = `${product.name} ${product.size} ml`;
 document.getElementById("price").textContent = `${product.price} DKK`;
@@ -62,33 +66,11 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
-if (!localStorage.getItem("cart")) {
-    localStorage.setItem("cart", "[]");
-}
-const cart = JSON.parse(localStorage.getItem("cart"));
+const cart = createCart()
 
-const addToCartButton = document.querySelector(".cart-button");
+const addToCartButton = document.querySelector(".add-to-cart-button");
 addToCartButton.id = productID;
-addToCartButton.addEventListener("click", function () {
-    let cartItem = {
-        "id": productID,
-        "quantity": quantityElement.value
-    }
-
-/*     let product = parseProduct();
-    let quantity = quantityElement.value;
-    for (let i = 0; i < quantity; i++) {
-    }
-} 
-quantityElement.value = 1; */
-    if (!cart.some(item => item.id === product.id)) {
-        cart.push(cartItem);
-        alert(`${product.name} added to cart!`);
-    } else {
-        alert(`${product.name} already in cart!`)
-    }
-    localStorage.setItem("cart", JSON.stringify(cart));
-});
+attachAddToCartButtons(cart, () => quantityElement.value)
 
 /* function parseProduct() {
     return {
