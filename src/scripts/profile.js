@@ -14,7 +14,7 @@ function unhidePassword() {
 
 
 function displayAccountInfo(user) {
-    document.getElementById('usernameHeading-profile').innerText = user["userName"] || "";
+    document.getElementById('usernameHeading-profile').innerText = user["firstName"] || "";
     document.getElementById('username-display').innerText = user["userName"];
     document.getElementById('email-display').innerText = user["email"];
     document.getElementById('firstname-display').innerText = user["firstName"];

@@ -93,10 +93,13 @@ li {
     list-style-type: none;
 }
 
-.header-links li:hover {
+.header-links li:not(#header-name):hover {
     background-color: #65b0fb;
 }
 
+.header-button-label {
+    display: none;
+}
 
 
 /*--------------- MAIN PANELS -----------------*/
@@ -221,6 +224,10 @@ main {
 
     #header-hamburger:hover {
         background-color: var(--main-light-blue);
+    }
+
+    .header-button-label {
+        display: inline;
     }
 
 }

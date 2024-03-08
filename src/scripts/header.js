@@ -1,7 +1,12 @@
 import {isLoggedIn} from './loggedIn.js'
+import { getUserInfo } from './store_user_info.js';
 
 export function createHeader() {
-    let profileLink = isLoggedIn()? './profile.html' : './login.html';
+    let loggedIn = isLoggedIn();
+    let profileLink = loggedIn? './profile.html' : './login.html';
+    let user = getUserInfo();
+    let name = loggedIn ? ("Hi, "+ user.firstName) : "";
+    let logOutButton = loggedIn? `<li><a href="./index.html"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ></a><span class="header-button-label"> &nbsp; Logout</span></li>` : ""
 
     return (
         `<div class="header-container">
@@ -13,9 +18,10 @@ export function createHeader() {
                     <li><a href="#footer">Contact</a></li>
                 </ul>
                 <ul class="header-links">
-                    <li><a id="profileLink" href="${profileLink}"><img src="../../assets/icons/profile.png" alt="profile-picture" height="36px" ></a></li>
-                    <li><a href="./index.html"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ></a></li>
-                    <li><a href="./shopping_cart.html"><img src="../../assets/icons/shopping-cart.png" alt="shopping-cart-picture" height="36px" ></a></li>
+                    <li id="header-name"><span>${name}</span></li>
+                    <li><a id="profileLink" href="${profileLink}"><img src="../../assets/icons/profile.png" alt="profile-picture" height="36px"><span class="header-button-label"> &nbsp; Profile</span></a></li>
+                    <li><a href="./shopping_cart.html"><img src="../../assets/icons/shopping-cart.png" alt="shopping-cart-picture" height="36px" ><span class="header-button-label"> &nbsp; Cart</span></a></li>
+                    ${logOutButton}
                 </ul>
             </div>
         </div>`

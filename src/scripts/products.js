@@ -26,7 +26,7 @@ export function createProducts() {
                 "mineral",
                 "still"
             ],
-            "rating": 2,
+            "rating": 5,
             "price": 14.95,
             "id": 1
         },
@@ -42,7 +42,7 @@ export function createProducts() {
                 "carbonated",
                 "flavoured"
             ],
-            "rating": 3,
+            "rating": 5,
             "price": 14.95,
             "id": 2
         },
