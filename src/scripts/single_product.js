@@ -1,6 +1,15 @@
 import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
+import { attachAddToCartButtons } from "./add_to_cart.js";
+import { createCart } from "./add_to_cart.js";
 // import { addItemToCart } from "../scripts/to_cart.js";
+
+
+/* 
+-------------------------------------------------
+currently the id and the quantity is stored in the local storage's cart item
+-------------------------------------------------
+ */
 
 const ALL_PRODUCTS = createProducts();
 
@@ -37,8 +46,11 @@ document.getElementById("plus-quantity").addEventListener("click", function () {
 });
 
 let productID = localStorage.getItem("productId");
-productID = productID ? Number(productID) : 26;
+
+productID = ((undefined === productID) ?  26 : Number(productID));
 const product = ALL_PRODUCTS.find(p => p.id === productID);
+console.log(product)
+
 
 document.getElementById("name").textContent = `${product.name} ${product.size} ml`;
 document.getElementById("price").textContent = `${product.price} DKK`;
@@ -54,28 +66,13 @@ for (let i = 1; i <= 5; i++) {
     }
 }
 
+const cart = createCart()
 
-if (!localStorage.getItem("cart")) {
-    localStorage.setItem("cart", "[]");
-}
+const addToCartButton = document.querySelector(".add-to-cart-button");
+addToCartButton.id = productID;
+attachAddToCartButtons(cart, () => quantityElement.value)
 
-const cart = JSON.parse(localStorage.getItem("cart"));
-
-
-document.getElementById("cart-button").addEventListener("click", function () {
-    let product = parseProduct();
-    let quantity = quantityElement.value;
-    for (let i = 0; i < quantity; i++) {
-        if (!cart.some(item => item.itemTitle === product.itemTitle)) {
-            cart.push(product);
-        }
-    }
-    quantityElement.value = 1;
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert(`${product.itemTitle} added to cart!`);
-});
-
-function parseProduct() {
+/* function parseProduct() {
     return {
         "itemTitle": product.name,
         "itemSize": product.size,
@@ -83,4 +80,4 @@ function parseProduct() {
         "itemImg": product.picture
     };
 }
-
+ */

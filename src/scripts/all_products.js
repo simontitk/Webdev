@@ -1,5 +1,7 @@
 import {createProducts} from "../scripts/products.js"
 import {createProductCard} from "../scripts/product_card.js"
+import { attachAddToCartButtons } from "./add_to_cart.js";
+import { createCart } from "./add_to_cart.js";
 
 
 // grabbing toggle buttons and the corresponding panels in the sidebar's filters
@@ -16,6 +18,8 @@ for (let i = 0; i < toggleHeaders.length; i++) {
 
 
 // populating the product display and filtering it
+
+const CART = createCart()
 
 const PRODUCTS = createProducts();
 const categoryCheckboxes = [...document.querySelectorAll(".category-checkbox")];
@@ -70,6 +74,7 @@ filterButton.onclick = () => {
     let filteredProducts = filterProducts(PRODUCTS);
     insertProductCards(filteredProducts);
     attachProductPages();
+    attachAddToCartButtons(CART)
 };
 
 resetFilterButton.onclick = () => {
@@ -86,3 +91,4 @@ if (selectedCategory) {
 }
 
 attachProductPages();
+attachAddToCartButtons(CART)
