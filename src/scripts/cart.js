@@ -21,7 +21,6 @@ function ready() {
     for (var i = 0; i < cart.length; i++) {
         var product = productList[cart[i].id]
         var quantity = cart[i].quantity
-        console.log(product.name)
         addItemToCart(product.id, product.name, product.size, product.quantity, product.price, product.picture, quantity)
         updateCartTotal()
     }
@@ -46,6 +45,7 @@ function removeCartItem(event) {
     var buttonClicked = event.target
     var rowToRemove = buttonClicked.parentElement.parentElement
     var id = rowToRemove.getElementsByClassName('basket-item-left-container')[0].id
+    console.log(rowToRemove)
     var temp = cart.filter(item => item.id != id)
     localStorage.setItem("cart", JSON.stringify(temp))
     buttonClicked.parentElement.parentElement.remove()
@@ -53,10 +53,23 @@ function removeCartItem(event) {
 }
 
 function quantityChanged(event) {
+    const cart = createCart()
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
     }
+    var rowToUpdate = input.parentElement.parentElement.parentElement.parentElement
+    var id = rowToUpdate.getElementsByClassName('basket-item-left-container')[0].id
+    console.log(id)
+    var productToUpdate = cart.find(matchById)
+    console.log(productToUpdate)
+    productToUpdate.quantity = input.value
+
+    function matchById(product) {
+        console.log(product)
+        return product.id == id
+    }
+    localStorage.setItem("cart", JSON.stringify(cart))
     updateCartTotal()
 }
 
