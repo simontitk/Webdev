@@ -56,7 +56,7 @@ function quantityChanged(event) {
         input.value = 1
     }
     var rowToUpdate = input.parentElement.parentElement.parentElement.parentElement
-    var id = rowToUpdate.getElementByClassName('basket-item-left-container')[0].id
+    var id = rowToUpdate.getElementsByClassName('basket-item-left-container')[0].id
     var productToUpdate = cart.find(matchById)
     productToUpdate.quantity = Number(input.value)
 

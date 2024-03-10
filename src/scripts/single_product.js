@@ -2,14 +2,7 @@ import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
 import { attachAddToCartButtons } from "./add_to_cart.js";
 import { createCart } from "./add_to_cart.js";
-// import { addItemToCart } from "../scripts/to_cart.js";
 
-
-/* 
--------------------------------------------------
-currently the id and the quantity is stored in the local storage's cart item
--------------------------------------------------
- */
 
 const ALL_PRODUCTS = createProducts();
 
