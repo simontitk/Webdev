@@ -66,7 +66,7 @@ filterButton.onclick = () => {
     let filteredProducts = filterProducts(PRODUCTS);
     insertProductCards(filteredProducts);
     attachProductPages();
-    attachAddToCartButtons(CART)
+    attachAddToCartButtons(CART);
 };
 
 resetFilterButton.onclick = () => {
@@ -83,4 +83,4 @@ if (selectedCategory) {
 }
 
 attachProductPages();
-attachAddToCartButtons(CART)
+attachAddToCartButtons(CART);

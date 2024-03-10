@@ -101,6 +101,12 @@ li {
     display: none;
 }
 
+#header-name {
+    white-space: nowrap;
+    overflow-x: hidden;
+    max-width: 150px;
+}
+
 
 /*--------------- MAIN PANELS -----------------*/
 
@@ -178,7 +184,7 @@ main {
 
 /* ------------------- MOBILE VIEW  ------------------- */
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 950px) {
 
     .header-lists {
         position: fixed;
@@ -234,7 +240,7 @@ main {
     
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
 
     main {
         flex-direction: column;

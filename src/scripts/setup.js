@@ -15,6 +15,5 @@ if (isLoggedIn()) {
 
 const navLinks = document.getElementById("header-navlinks");
 document.getElementById("header-hamburger").onclick = () => {
-    console.log(navLinks)
     navLinks.classList.toggle("hidden");
 }

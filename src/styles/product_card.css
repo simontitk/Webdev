@@ -79,7 +79,7 @@
     height: 70px;
 }
 
-.add-to-cart-button {
+.add-to-cart-button:not(.button) {
     color: white;
     font-size: 17px;
     font-family: 'Poppins';

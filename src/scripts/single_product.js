@@ -2,6 +2,7 @@ import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
 import { attachAddToCartButtons } from "./add_to_cart.js";
 import { createCart } from "./add_to_cart.js";
+import { attachProductPages } from "../scripts/product_card.js";
 
 
 const ALL_PRODUCTS = createProducts();
@@ -42,7 +43,6 @@ let productID = localStorage.getItem("productId");
 
 productID = ((undefined === productID) ?  26 : Number(productID));
 const product = ALL_PRODUCTS.find(p => p.id === productID);
-console.log(product)
 
 
 document.getElementById("name").textContent = `${product.name} ${product.size} ml`;
@@ -63,14 +63,6 @@ const cart = createCart()
 
 const addToCartButton = document.querySelector(".add-to-cart-button");
 addToCartButton.id = productID;
-attachAddToCartButtons(cart, () => quantityElement.value)
+attachAddToCartButtons(cart, () => quantityElement.value);
+attachProductPages();
 
-/* function parseProduct() {
-    return {
-        "itemTitle": product.name,
-        "itemSize": product.size,
-        "itemPrice": product.price,
-        "itemImg": product.picture
-    };
-}
- */
