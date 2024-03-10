@@ -1,7 +1,6 @@
 import { createProductCard } from "../scripts/product_card.js";
 import { createProducts } from "../scripts/products.js";
-import { attachAddToCartButtons } from "./add_to_cart.js";
-import { createCart } from "./add_to_cart.js";
+import { attachAddToCartButtons, createCart } from "./add_to_cart.js";
 
 
 const ALL_PRODUCTS = createProducts();
@@ -40,7 +39,7 @@ document.getElementById("plus-quantity").addEventListener("click", function () {
 
 let productID = localStorage.getItem("productId");
 
-productID = ((undefined === productID) ?  26 : Number(productID));
+productID = ((undefined === productID) ? 26 : Number(productID));
 const product = ALL_PRODUCTS.find(p => p.id === productID);
 console.log(product)
 
@@ -65,12 +64,25 @@ const addToCartButton = document.querySelector(".add-to-cart-button");
 addToCartButton.id = productID;
 attachAddToCartButtons(cart, () => quantityElement.value)
 
-/* function parseProduct() {
-    return {
-        "itemTitle": product.name,
-        "itemSize": product.size,
-        "itemPrice": product.price,
-        "itemImg": product.picture
-    };
+
+const userAddressElement = document.getElementById("address");
+let userCity, userAddress;
+
+if (localStorage.getItem('city')) {
+    userCity = localStorage.getItem('city');
+} else {
+    userCity = "Copenhagen";
 }
- */
+if (localStorage.getItem('address')) {
+    userAddress = localStorage.getItem('address');
+} else {
+    userAddress = "";
+}
+userAddressElement.innerHTML = userCity + '<br>' + userAddress;
+
+document.querySelectorAll(".product-display").forEach(display => {
+    display.onclick = () => {
+        localStorage.setItem("productId", display.id);
+        location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
+    }
+});
