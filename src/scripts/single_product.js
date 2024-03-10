@@ -86,3 +86,8 @@ document.querySelectorAll(".product-display").forEach(display => {
         location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
     }
 });
+
+document.getElementById('share-button').addEventListener('click', function () {
+    alert('Thanks for sharing!');
+    window.open('https://www.facebook.com', '_blank');
+});
