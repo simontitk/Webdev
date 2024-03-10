@@ -14,9 +14,7 @@ if (document.readyState == 'loading') {
 function ready() {
     // loads cart items
     const cart = createCart()
-    console.log(cart)
     const productList = createProducts()
-    console.log(productList)
 
     for (var i = 0; i < cart.length; i++) {
         var product = productList[cart[i].id]
@@ -45,7 +43,6 @@ function removeCartItem(event) {
     var buttonClicked = event.target
     var rowToRemove = buttonClicked.parentElement.parentElement
     var id = rowToRemove.getElementsByClassName('basket-item-left-container')[0].id
-    console.log(rowToRemove)
     var temp = cart.filter(item => item.id != id)
     localStorage.setItem("cart", JSON.stringify(temp))
     buttonClicked.parentElement.parentElement.remove()
@@ -59,14 +56,11 @@ function quantityChanged(event) {
         input.value = 1
     }
     var rowToUpdate = input.parentElement.parentElement.parentElement.parentElement
-    var id = rowToUpdate.getElementsByClassName('basket-item-left-container')[0].id
-    console.log(id)
+    var id = rowToUpdate.getElementByClassName('basket-item-left-container')[0].id
     var productToUpdate = cart.find(matchById)
-    console.log(productToUpdate)
-    productToUpdate.quantity = input.value
+    productToUpdate.quantity = Number(input.value)
 
     function matchById(product) {
-        console.log(product)
         return product.id == id
     }
     localStorage.setItem("cart", JSON.stringify(cart))

@@ -6,7 +6,7 @@ export function createHeader() {
     let profileLink = loggedIn? './profile.html' : './login.html';
     let user = getUserInfo();
     let name = loggedIn ? ("Hi, "+ user.firstName) : "";
-    let logOutButton = loggedIn? `<li><a href="./index.html" id="logout-button"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ></a><span class="header-button-label"> &nbsp; Logout</span></li>` : ""
+    let logOutButton = loggedIn? `<li><a href="./index.html" id="logout-button"><img src="../../assets/icons/exit.png" alt="exit-picture" height="36px" ><span class="header-button-label"> &nbsp; Logout</span></a></li>` : ""
 
     return (
         `<div class="header-container">
