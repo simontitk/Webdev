@@ -1,7 +1,7 @@
 .center-panel {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     overflow: hidden;
     width: 70%;
 }
@@ -26,33 +26,7 @@
     flex: 2;
 }
 
-.campaign {
-    height: 150px;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: clamp(12px, 50px, 8vw);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #89c7e0, #759cd3);
-    background-size: 400% 400%;
-    animation: campaignAnimation 4s ease infinite;
-}
 
-@keyframes campaignAnimation {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
 
 .suggestions {
     display: flex;
@@ -60,9 +34,6 @@
     justify-content: space-around;
     align-items: flex-start;
     width: 100%;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 
@@ -180,7 +151,11 @@
 }
 
 .delivery-details {
-    font-size: small;
+    font-size: 18px;
+}
+
+.delivery-details > p {
+    margin: 5px 0px;
 }
 
 .address {
@@ -258,6 +233,7 @@
 .suggested-items {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     width: 100%;

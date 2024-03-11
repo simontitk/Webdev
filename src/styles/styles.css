@@ -115,7 +115,7 @@ main {
     margin-top: 70px;
     flex-direction: row;
     align-items: stretch;
-    justify-content: center;
+    justify-content: space-between;
     flex: 1;
     width: 100vw;
     margin-top: 70px;
@@ -129,11 +129,34 @@ main {
 
 .center-panel {
     min-width: 70%;
+    background-color:  rgb(241, 239, 239);
 }
 
 .right-panel {
     background-color: white;
     min-width: 15%;
+}
+
+
+/*------------CAMPAIGN------------*/
+
+.campaign {
+    height: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(12px, 50px, 8vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #89c7e0, #759cd3);
+    background-size: 400% 400%;
+    animation: campaignAnimation 4s ease infinite;
+}
+
+@keyframes campaignAnimation {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
 }
 
 /* ------------------- FOOTER ------------------- */
@@ -244,6 +267,7 @@ main {
 
     main {
         flex-direction: column;
+        justify-content: space-between;
     }
 
     .right-panel {

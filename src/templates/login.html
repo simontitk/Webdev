@@ -19,43 +19,47 @@
     <main>
       <div class="left-panel"></div>
       <div class="center-panel">
+       <div class="form-page">
         <form id = "loginForm">
-          <h1>Welcome back!</h1>
-          <h2>Log in to your account</h2>
-          <div class = "form-element">
-            <div>
-                <label for="email"><b>Email adress</b></label>
+            <h1>Welcome back!</h1>
+            <h2>Log in to your account</h2>
+            <div class = "form-element">
+              <div>
+                  <label for="email"><b>Email adress</b></label>
+              </div>
+              <input
+                class="login-input"
+                id = "email"
+                type="email"
+                placeholder="Enter email address"
+                name="email"
+                required
+              />
             </div>
-            <input
-              id = "email"
-              type="email"
-              placeholder="Enter email address"
-              name="email"
-              required
-            />
-          </div>
-          <div class = "form-element">
-            <div>
-                <label for="psw"><b>Password</b></label>  
+            <div class = "form-element">
+              <div>
+                  <label for="psw"><b>Password</b></label>  
+              </div>
+              <input
+                class="login-input"
+                id="password"
+                type="password"
+                placeholder="Enter password"
+                name="psw"
+                required
+              />
             </div>
-            <input
-              id="password"
-              type="password"
-              placeholder="Enter password"
-              name="psw"
-              required
-            />
+            <button id = "loginButton" type="submit" class="button">Login</button>
+          </form>
+          <div id="messageBox"></div>
+          <div>
+            <h2>Are you new here?</h2>
+            <a href="register.html">
+              <button type="button" class="button">Create Account</button>
+            </a>
           </div>
-          <button id = "loginButton" type="submit" class="button">Login</button>
-        </form>
-        <div id="messageBox"></div>
-        <div>
-          <h2>Are you new here?</h2>
-          <a href="register.html">
-            <button type="button" class="button">Create Account</button>
-          </a>
         </div>
-      </div>
+       </div>
       <div class="right-panel"></div>
     </main>
     <footer id="footer">

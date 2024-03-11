@@ -22,124 +22,135 @@
     <main>
       <div class="left-panel"></div>
       <div class="center-panel">
-        <form id="registration-form">
-          <h1>Welcome!</h1>
-          <h2>Fill out your information below</h2>
-
-          <div class = "form-element">
-            <div>
-                <label for="fname"><b>First name</b></label>
+        <div class="form-page">
+            <form id="registration-form">
+                <h1>Welcome!</h1>
+                <h2>Fill out your information below</h2>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="fname"><b>First name</b></label>
+                  </div>
+                  <input
+                    class="login-input"
+                    type="text"
+                    id="firstName"
+                    placeholder="Enter first name"
+                    name="fname"
+                    required
+                  />
+                </div>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="lname"><b>Last name</b></label>
+                  </div>
+                  <input
+                    class="login-input"
+                    type="text"
+                    id="lastName"
+                    placeholder="Enter last name"
+                    name="lname"
+                    required
+                  />
+                </div>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="addressHome"><b>Address</b></label>
+                  </div>
+                  <input
+                    class="login-input"
+                    type="text"
+                    id="address"
+                    placeholder="Enter address"
+                    name="addressHome"
+                    required
+                  />
+                </div>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="city"><b>City</b></label>
+                  </div>
+                  <input
+                    class="login-input"
+                    type="text"
+                    placeholder="Enter city"
+                    name="city"
+                    id="city"
+                    required
+      
+                  />
+                </div>
+                <div class="form-element">
+                  <div>
+                    <label for="username"><b>Username</b></label>
+                  </div>
+                    <input
+                        class="login-input" 
+                    type="text" 
+                    id="userName" 
+                    placeholder="Enter Username" 
+                    name="username" 
+                    required
+                    />
+                </div>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="email"><b>Email adress</b></label>
+                  </div>
+                  <input
+                    class="login-input"
+                    type="email"
+                    id="email"
+                    placeholder="Enter email address"
+                    name="email"
+                    required
+                  />
+                </div>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="phonenumber"><b>Phone number</b></label>
+                  </div>
+                  <input
+                    class="login-input"
+                    type="text"
+                    id="phoneNumber"
+                    placeholder="Enter phone number"
+                    name="phonenumber"
+                    required
+                  />
+                </div>
+      
+                <div class = "form-element">
+                  <div>
+                      <label for="psw"><b>Password</b></label>  
+                  </div>
+                  
+                  <input
+                    class="login-input"
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    name="psw"
+                    required
+                    
+                  />
+                </div>
+                <button type="submit" class="button">Create account</button>
+              </form>
+              <div>
+                <h2>Already have an account?</h2>
+                <a href="login.html">
+                  <button type="button" class="button">Log in</button>
+                </a>
+              </div>
             </div>
-            <input
-              type="text"
-              id="firstName"
-              placeholder="Enter first name"
-              name="fname"
-              required
-            />
-          </div>
-
-          <div class = "form-element">
-            <div>
-                <label for="lname"><b>Last name</b></label>
-            </div>
-            <input
-              type="text"
-              id="lastName"
-              placeholder="Enter last name"
-              name="lname"
-              required
-            />
-          </div>
-
-          <div class = "form-element">
-            <div>
-                <label for="addressHome"><b>Address</b></label>
-            </div>
-            <input
-              type="text"
-              id="address"
-              placeholder="Enter address"
-              name="addressHome"
-              required
-            />
-          </div>
-
-          <div class = "form-element">
-            <div>
-                <label for="city"><b>City</b></label>
-            </div>
-            <input
-              type="text"
-              placeholder="Enter city"
-              name="city"
-              id="city"
-              required
-
-            />
-          </div>
-          <div class="form-element">
-            <div>
-              <label for="username"><b>Username</b></label>
-            </div>
-              <input 
-              type="text" 
-              id="userName" 
-              placeholder="Enter Username" 
-              name="username" 
-              required
-              />
-          </div>
-
-          <div class = "form-element">
-            <div>
-                <label for="email"><b>Email adress</b></label>
-            </div>
-            <input
-              type="text"
-              id="email"
-              placeholder="Enter email address"
-              name="email"
-              required
-            />
-          </div>
-
-          <div class = "form-element">
-            <div>
-                <label for="phonenumber"><b>Phone number</b></label>
-            </div>
-            <input
-              type="text"
-              id="phoneNumber"
-              placeholder="Enter phone number"
-              name="phonenumber"
-              required
-            />
-          </div>
-
-          <div class = "form-element">
-            <div>
-                <label for="psw"><b>Password</b></label>  
-            </div>
-            
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter password"
-              name="psw"
-              required
-              
-            />
-          </div>
-          <button type="submit" class="button">Create account</button>
-        </form>
-        <div>
-          <h2>Already have an account?</h2>
-          <a href="login.html">
-            <button type="button" class="button">Log in</button>
-          </a>
         </div>
-      </div>
+        
       <div class="right-panel"></div>
     </main>
     <footer id="footer">

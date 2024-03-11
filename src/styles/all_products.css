@@ -2,6 +2,10 @@
 
 /* LEFT PANEL */
 
+.left-panel {
+    min-width: 300px;
+    padding-left: 0%;
+}
 
 .filter-container {
     display: flex;

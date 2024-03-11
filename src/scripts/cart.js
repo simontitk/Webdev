@@ -76,7 +76,7 @@ function addItemToCart(id, title, size, amount, price, imageSrc, quantity) {
             <img class="basket-item-image" src="../../images/${imageSrc}">
             <div class="basket-item-name-container">
                 <span class="basket-item-title">${title}</span>
-                <span class="basket-item-size">${amount} x ${size}</span>
+                <span class="basket-item-size">${amount} x ${size} ml</span>
                 <div class="input-group quantity-selector">
                     <input type="number" id="inputQuantitySelector" class="form-control" 
                         name="quantity" title="quantity" value="${quantity}" min="0" max="99" step="1">

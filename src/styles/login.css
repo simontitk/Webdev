@@ -1,3 +1,15 @@
+.form-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.login-input {
+    max-width: 400px;
+}
+
+
 form, label {
     display:flex;
     flex-direction:column;
