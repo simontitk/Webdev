@@ -27,15 +27,31 @@
 }
 
 .campaign {
-    background: linear-gradient(to right, #87C4FF, #6cb5ff);
+    height: 150px;
     width: 100%;
-    margin-top: 32px;
-    padding-top: 64px;
-    padding-bottom: 64px;
     text-align: center;
-    color: white;
-    font-size: 64px;
-    border: rgb(231, 231, 231) 1px solid;
+    font-weight: bold;
+    font-size: clamp(12px, 50px, 8vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #89c7e0, #759cd3);
+    background-size: 400% 400%;
+    animation: campaignAnimation 4s ease infinite;
+}
+
+@keyframes campaignAnimation {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 .suggestions {
