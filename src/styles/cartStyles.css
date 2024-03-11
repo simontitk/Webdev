@@ -7,7 +7,7 @@
     }
 
     .header-filler {
-        height: 40px;
+        height: 5px;
     }
     
     .top-cart-container {
@@ -15,9 +15,14 @@
         flex-direction: row;
         justify-content: flex-start;
         align-content: flex-end;
-        padding-left: 40px;
+        margin-left: 15%;
+        padding: 30px;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: 'poppins';
 
     }
+
     .middle-cart-container {
         display: flex;
         flex-direction: column;
@@ -41,9 +46,6 @@
         align-items: end;
     }
 
-    .subtotal-item {
-        null
-    }
 
     .bottom-cart-container {
         display: flex;
@@ -72,16 +74,23 @@
         width: 65px;
         height: 65px;
         align-self: center;
+        margin-right: 15px;
     }
 
-    .basket-item-name {
+    .basket-item-left-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .basket-item-name-container {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
     }
 
-    .basket-item-name h2 {
+    .basket-item-title {
         font-size: 16px;
         font-weight: 600;
         padding: 0;
@@ -89,18 +98,27 @@
         border: 0;
     }
 
-    .basket-item-space {
-        null
+    .basket-item-size {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        border: 0;
     }
 
-    .basket-item-price {
+    .basket-item-space {
+        width: 10%;
+    }
+
+    .basket-item-price-container {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        align-items: flex-start;   
+        align-items: flex-start;
+        width: 95px;
     }
 
-    .basket-item-price h3 {
+    .basket-item-price {
         font-size: 16px;
         font-weight: 600;
         padding: 0;
