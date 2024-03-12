@@ -75,7 +75,7 @@ export function createProducts() {
                 "flavoured"
             ],
             "rating": 3,
-            "price": 19.95,
+            "price": 69.95,
             "id": 4
         },
         {
@@ -218,7 +218,7 @@ export function createProducts() {
                 "flavoured"
             ],
             "rating": 5,
-            "price": 19.95,
+            "price": 119.95,
             "id": 14
         },
         {
@@ -275,7 +275,7 @@ export function createProducts() {
                 "electrolyte"
             ],
             "rating": 4,
-            "price": 14.95,
+            "price": 54.95,
             "id": 18
         },
         {
@@ -343,11 +343,71 @@ export function createProducts() {
             "size": 100.0,
             "quantity": 1,
             "categories": [
-                "mineral", "craft"
+                "mineral", "craft", "flavoured"
             ],
             "rating": 5,
             "price": 999.95,
             "id": 23
+        },
+
+        {
+            "picture": "Bottled_water_1x1000ml.png",
+            "name": "Flask of Pond Water",
+            "brand": "HomePond Inc.",
+            "description": "A large flask of water straight outta the pond.",
+            "size": 3000.0,
+            "quantity": 1,
+            "categories": [
+                "still", "craft"
+            ],
+            "rating": 5,
+            "price": 74.95,
+            "id": 24
+        },
+
+        {
+            "picture": "Radium_vitalizer_water_jar.png",
+            "name": "Radium Premium",
+            "brand": "Radium Health Products",
+            "description": "Enjoy the benefits of radium. Feel the change in your DNA.",
+            "size": 500.0,
+            "quantity": 1,
+            "categories": [
+                "mineral", "craft"
+            ],
+            "rating": 5,
+            "price": 99.95,
+            "id": 25
+        },
+
+        {
+            "picture": "dirty-glass-or-glass-of-dirty-water.png",
+            "name": "Puddle Water",
+            "brand": "HomePond Inc.",
+            "description": "A dirty glass of dirty water. Straight outta the streets of Ama'r.",
+            "size": 250.0,
+            "quantity": 1,
+            "categories": [
+                "mineral", "craft"
+            ],
+            "rating": 2,
+            "price": 1.95,
+            "id": 26
+        },
+
+        {
+            "picture": "green_water.png",
+            "name": "Jylland Green Water",
+            "brand": "HomePond Inc.",
+            "description": "Straight out of a Jyde's radiator.",
+            "size": 150.0,
+            "quantity": 1,
+            "categories": [
+                "flavoured", "craft"
+            ],
+            "rating": 2,
+            "price": 59.95,
+            "id": 27
         }
 
     ]);
