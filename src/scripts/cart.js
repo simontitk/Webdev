@@ -85,7 +85,7 @@ function addItemToCart(id, title, size, amount, price, imageSrc, quantity) {
         </div>
             <div class="basket-item-space"></div>
             <div class="basket-item-price-container">
-                <span class="basket-item-price">${price}</span>
+                <span class="basket-item-price">${price} DKK</span>
                 <button class="button-delete" role="button">delete</button>
             </div>`
         cartRow.innerHTML = cartRowContents
