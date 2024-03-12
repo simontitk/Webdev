@@ -114,6 +114,10 @@
     align-items: baseline;
 }
 
+.product-brand {
+    font-weight: bold;
+}
+
 .price p {
     margin-top: 10px;
 

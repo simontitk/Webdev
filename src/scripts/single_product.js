@@ -45,6 +45,7 @@ const product = ALL_PRODUCTS.find(p => p.id === productID);
 
 document.getElementById("name").innerHTML = `${product.name}<br>${product.size} ml`;
 document.getElementById("price").textContent = `${product.price} DKK`;
+document.getElementById("brand").textContent = `Made by ${product.brand}`;
 document.getElementById("description").textContent = product.description;
 document.getElementById("picture").src = `../../images/${product.picture}`;
 
