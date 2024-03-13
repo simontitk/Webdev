@@ -12,7 +12,7 @@ This is the first iteration of the project, developed using plain JavaScript, HT
 
 The website can be accessed using the following link:
 
-https://simontitk.github.io/Webdev/src/templates/index.html
+[https://simontitk.github.io/Webdev/src/templates/index.html](https://simontitk.github.io/Webdev/src/templates/index.html)
 
 ----
 
