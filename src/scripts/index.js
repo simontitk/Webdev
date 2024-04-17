@@ -16,6 +16,6 @@ attachAddToCartButtons(CART);
 document.querySelectorAll(".category-card").forEach(
     category => category.onclick = () => {
         localStorage.setItem("selectedCategory", category.id);
-        location.href = 'http://127.0.0.1:5500/src/templates/all_products.html'; 
+        location.href = '../templates/all_products.html'; 
     }
 );
