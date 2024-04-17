@@ -6,7 +6,7 @@ form.onsubmit = (e) => {
     e.preventDefault();
     storeUserInfo();
     setLoggedIn();
-    location.href = 'http://127.0.0.1:5500/src/templates/index.html';
+    location.href = '../templates/index.html';
 }
 
 

@@ -34,10 +34,7 @@ export function attachProductPages() {
     document.querySelectorAll(".product-display").forEach(display => {
         display.onclick = () => {
             localStorage.setItem("productId", display.id);
-            location.href = 'http://127.0.0.1:5500/src/templates/single_product.html';
+            location.href = '../templates/single_product.html';
         }
     });
 }
-
-// alternative: icon
-// <img src="../../assets/icons/basket.png" width="40px" height="40px" alt="Icon of a shopping cart">
